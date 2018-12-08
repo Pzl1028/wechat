@@ -1,0 +1,113 @@
+<view class='body'>
+  <view class='header'>
+    <text >身体尺寸选择（此商品会按本尺寸进行制作）</text> 
+    <view><navigator url='/pages/mine/size/mysize'><text>{{ace}}</text></navigator></view>
+  </view> 
+  <!--  --> 
+  <view class='maddletop{{textx}}'style='display:{{tipsshow}}'>
+        <view class="maddletopa" >{{ljgmx.key.type_name}}</view>
+        <view class='maddletopb' wx:for="{{ljgmx.key.val}}" wx:key="">
+          <view class='maddletopba'>         
+          <image src='{{item.picture}}' data-id="{{item.id}}" style="{{item.id == id?'border:1px solid #000;':''}}" data-content="{{ljgmx}}" bindtap="click" data-key='{{item.id}}'></image>
+          </view>
+          <view class='maddletopbab'>{{item.sku_name}}</view>
+          <!-- <text>{{item.content}}</text> -->
+        </view> 
+  </view> 
+  <!--  -->
+  <view class='maddletop' style='display:{{tipsshow1}}'>
+        <view class="maddletopa" >{{ljgmx1.key.type_name}}</view>
+        <view class='maddletopb' wx:for="{{ljgmx1.key.val}}" wx:key="">
+          <view class='maddletopba'>         
+          <image src='{{item.picture}}' data-abb="{{item.id}}" style="{{item.id == abb?'border:1px solid #000;':''}}" data-content="{{ljgmx}}" bindtap="click1"  data-key='{{item.id}}'></image>
+          </view>
+          <view class='maddletopbab'>{{item.sku_name}}</view>
+          <!-- <text>{{item.content}}</text> -->
+        </view>
+  </view> 
+  <!--  -->
+  <view class='maddletop' style='display:{{tipsshow2}}'>
+        <view class="maddletopa" >{{ljgmx2.key.type_name}}</view>
+        <view class='maddletopb' wx:for="{{ljgmx2.key.val}}" wx:key="">
+          <view class='maddletopba'>         
+          <image src='{{item.picture}}'  data-abc="{{item.id}}" style="{{item.id == abc?'border:1px solid #000;':''}}"  data-content="{{ljgmx}}"  bindtap="click2"  data-key='{{item.id}}'></image>
+          </view>
+          <view class='maddletopbab'>{{item.sku_name}}</view>
+          <!-- <text>{{item.content}}</text> -->
+        </view>
+  </view> 
+  <!--  -->
+  <view class='maddletop' style='display:{{tipsshow3}}'>
+        <view class="maddletopa" >{{ljgmx3.key.type_name}}</view>
+        <view class='maddletopb' wx:for="{{ljgmx3.key.val}}" wx:key="">
+          <view class='maddletopba'>         
+          <image src='{{item.picture}}'  data-abd="{{item.id}}" style="{{item.id == abd?'border:1px solid #000;':''}}"  data-content="{{ljgmx}}"bindtap="click3"  data-key='{{item.id}}'></image>
+          </view>
+          <view class='maddletopbab'>{{item.sku_name}}</view>
+          <!-- <text>{{item.content}}</text> -->
+        </view>
+  </view> 
+  <!--  -->
+  <view class='maddletop' style='display:{{tipsshow4}}'>
+        <view class="maddletopa" >{{ljgmx4.key.type_name}}</view>
+        <view class='maddletopb' wx:for="{{ljgmx4.key.val}}" wx:key="">
+          <view class='maddletopba'>         
+          <image src='{{item.picture}}'  data-abe="{{item.id}}" style="{{item.id == abe?'border:1px solid #000;':''}}"  data-content="{{ljgmx}}"  bindtap="click4"  data-key='{{item.id}}'></image>
+          </view>
+          <view class='maddletopbab'>{{item.sku_name}}</view>
+          <!-- <text>{{item.content}}</text> -->
+        </view>
+  </view> 
+  <!--  -->
+  <view class='maddletop' style='display:{{tipsshow5}}'>
+        <view class="maddletopa" >{{ljgmx5.key.type_name}}</view>
+        <view class='maddletopb' wx:for="{{ljgmx5.key.val}}" wx:key="">
+          <view class='maddletopba'>         
+          <image src='{{item.picture}}'  data-abf="{{item.id}}" style="{{item.id == abf?'border:1px solid #000;':''}}"  data-content="{{ljgmx}}"  bindtap="click5"  data-key='{{item.id}}'></image>
+          </view>
+          <view class='maddletopbab'>{{item.sku_name}}</view>
+          <!-- <text>{{item.content}}</text> -->
+        </view>
+  </view> 
+  <!--  -->
+   <view class='maddletop' style='display:{{tipsshow6}}'>
+        <view class="maddletopa" >{{ljgmx6.key.type_name}}</view>
+        <view class='maddletopb' wx:for="{{ljgmx6.key.val}}" wx:key="">
+          <view class='maddletopba'>         
+          <image src='{{item.picture}}'  data-abg="{{item.id}}" style="{{item.id == abg?'border:1px solid #000;':''}}"  data-content="{{ljgmx}}"  bindtap="click6"  data-key='{{item.id}}'></image>
+          </view>
+          <view class='maddletopbab'>{{item.sku_name}}</view>
+          <!-- <text>{{item.content}}</text> -->
+        </view>
+  </view> 
+   <view class='maddletop' style='display:{{tipsshow7}}'>
+        <view class="maddletopa" >{{}}绣字颜色</view>
+        <view class='maddletopb' wx:for="{{ljgmx7.key.val}}" wx:key="">
+          <view class='maddletopba'>         
+          <image src='{{item.picture}}'  data-abh="{{item.id}}" style="{{item.id == abh?'border:1px solid #000;':''}}"  data-content="{{ljgmx}}"  bindtap="click7"  data-key='{{item.id}}'></image>
+          </view>
+          <view class='maddletopbab'>{{item.sku_name}}</view>
+          <!-- <text>{{item.content}}</text> -->
+        </view>
+  </view> 
+
+
+
+  <!-- <view class='maddletop' style='display:{{tipsshow6}}'>
+        <view class="maddletopa" >{{ljgmx6.key.type_name}}</view>
+        <view class='maddletopb' wx:for="{{ljgmx6.key.val}}" wx:key="">
+          <view class='maddletopba'>         
+          <image src='{{item.picture}}'  data-abg="{{item.value_id}}" style="{{item.value_id == abg?'border:1px solid #000;':''}}"  data-content="{{ljgmx}}"  bindtap="click6"  data-key='{{item.value_id}}'></image>
+          </view>
+          <view class='maddletopbab'>{{item.sku_name}}</view>
+          <text>{{item.content}}</text>
+        </view>
+  </view>  -->
+  <view class='maddlebott'>
+  <!-- <view class='maddletopa'>数量</view>
+   <view class='slbh'><text bindtap='addCount'>+</text><text>{{num}}</text><text bindtap='minusCount'>-</text></view> -->
+  </view>
+  <!-- <navigator url='/pages/ljgmxorder/ljgmxorder?product_id={{product_id}}'> -->
+  <view class='footer'><text  data-ido='{{product_id}}'  bindtap='submit'>立即购买</text></view>
+  <!-- </navigator> -->
+</view>

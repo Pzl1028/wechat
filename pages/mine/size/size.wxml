@@ -1,0 +1,25 @@
+<view class='body'>
+  <view class='header'>
+    <view class='headera'><text>*</text><label>姓名:</label><input type='text'  value='{{name}}' disabled='true'></input></view> 
+    <view class='headerb b'><text>*</text><label>身高：</label><input style='max-width:35%;' type='text'  value='{{height}}' disabled='true'></input></view>
+    <view class='headerb b'><text>*</text><label>体重：</label><input style='max-width:35%;' type='text'  value='{{weight}}' disabled='true' ></input></view>
+    <view class='headerb a'><label>性别：</label><input type='text'  value='{{sex}}' disabled='true'></input></view>
+    <view class='headerb a'><label>颈围：</label><input type='text'  value='{{breadthing}}' disabled='true' ></input></view>
+    <view class='headerb a'><label>臂长：</label><input type='text'  value='{{arm_length}}' disabled='true' ></input></view>
+    <view class='headerb a'><label>胸围：</label><input type='text'  value='{{chest}}' disabled='true' ></input></view>
+    <view class='headerb a'><label>腰围：</label><input type='text'  value='{{waist_circumference}}' disabled='true'></input></view>
+    <view class='headerb a'><label>臀围：</label><input type='text'  value='{{hip_circumference}}' disabled='true' ></input></view>
+    <view class='headerb a'><label>肩宽：</label><input type='text'  value='{{breadth}}' disabled='true'></input></view>
+    <view class='headerb a'><label>臀高：</label><input type='text'  value='{{s_buttock_height}}' disabled='true'></input></view>
+    <view class='headerb a'><label>过肩横颈：</label><input type='text'  value='{{s_cross}}' disabled='true'></input></view>
+    <view class='headerb a'><label>颈椎点高：</label><input type='text'  value='{{s_cross_height}}' disabled='true'></input></view>
+    <view class='headerb a'><label>颈高：</label><input type='text'  value='{{s_neck_girth}}' disabled='true'></input></view>
+    <view class='headerb a'><label>腰高：</label><input type='text'  value='{{s_waist_height}}' disabled='true'></input></view>
+    <!-- <view class='headerb a'><label>腿长：</label><input type='text'  value='{{long_legs}}' disabled='true'></input></view> -->
+  </view>
+  <view class='beizhu'>备注：除体重默认单位是千克(kg)外，其余皆为厘米(cm),空白区域为尚未录入系统信息</view>
+  <view class='footer'>
+  <navigator url='/pages/home/toorder/toorder'>
+    <text >编辑</text></navigator>
+   </view>
+</view>

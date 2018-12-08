@@ -1,0 +1,87 @@
+{
+  "pages": [
+    
+   
+    "pages/login/login",
+    "pages/home/home",
+    "pages/brand/jrgwcx/jrgwcx",  
+    "pages/mine/mine",
+    "pages/mine/size/mysize/mysize",
+    "pages/payorder/payorder",   
+    "pages/ljgmxorder/ljgmxorder",
+    "pages/loginone/loginone",
+    "pages/forget/forget",
+    "pages/home/toorder/toorder",
+    "pages/brand/ljgmx/ljgmx",
+    "pages/korder/korder",
+    "pages/brand/details/details",
+    "pages/cart/cart",
+    "pages/loginonea/loginonea",
+    "pages/home/toorders/toorders",
+    "pages/mine/balance/detailed/detailed",
+    "pages/mine/recharge/recharge",
+    "pages/brand/brand/brand",
+    "pages/brand/brand",     
+    "pages/cart/cartgg/cartgg",
+    "pages/mine/addresss/addresss",
+    "pages/mine/modifyaddres/modifyaddres",
+    "pages/mine/address/address",
+    "pages/mine/voucher/voucher",
+    "pages/brand/sizepage/sizepage",
+    "pages/home/toorderscz/toorderscz",
+    
+    "pages/mine/myorder/myorder",
+    "pages/mine/myorder/myorderwl/myorderwl",
+    "pages/mine/myorder/myorderfu/myorderfu",
+    "pages/mine/myorder/myorderfa/myorderfa",
+    "pages/mine/myorder/myordershou/myordershou",
+    "pages/mine/payment/payment",
+    "pages/mine/modify/modify",
+    "pages/mine/setup/setup",
+    "pages/mine/balance/balance",
+    "pages/mine/size/size",
+    "pages/mine/size/sizea/sizea",
+    "pages/mine/information/information",
+    "pages/register/register",
+    "pages/index/index",
+    "pages/style/style",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "东方云定制",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#392315",
+    "selectedColor": "#392315",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./img/home1.png",
+        "selectedIconPath": "./img/home.png"
+      },
+      {
+        "pagePath": "pages/brand/brand",
+        "text": "分类",
+        "iconPath": "./img/brand1.png",
+        "selectedIconPath": "./img/brand.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "./img/cart1.png",
+        "selectedIconPath": "./img/cart.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./img/mine1.png",
+        "selectedIconPath": "./img/mine.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+<view class='body'>
+  <!-- <view class='div'> -->
+  <!-- <navigator url="/pages/login/login"> -->
+    <!-- <image src='/img/logintou.png'></image></navigator> -->
+  <!-- </view>  -->
+  <view class='headera'>
+    <!-- <image src='http://dns.pengyoujuhui.com/305095799420713414.png'></image> -->
+  </view>
+  <view class='header'>
+    <image src='/img/264968570381550591.png'></image>
+  </view>
+  <view class='maddle'>
+    <navigator url='/pages/login/login'>
+    <view>Login</view>
+    </navigator>
+    <navigator url='/pages/register/register'>
+    <view>Register</view>
+    </navigator>
+  </view>
+  <!-- <view class='footer'><text>上海市服装研究所有限公司</text></view> -->
+</view>

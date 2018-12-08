@@ -1,0 +1,112 @@
+
+<view class='body'>
+  <!--  Begin Detailed Transmission -->
+  <view class='header'> 
+    <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" circular="{{circular}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:key="{{item}}" wx:for="{{banners}}">
+        <swiper-item>
+          <image src="{{item.banner_url}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--  END Detailed Transmission -->
+  <!-- <view style='width100%;height:77%'></view> -->
+  <!--BEGIN MIDDLE PRICE NAME INTRODUCTION  -->
+  <!-- <scroll-view scroll-y='true' style='height:100%'> -->
+    <view class='maddle'>
+    <view class='maddletop'>
+      <view>{{product_name}}</view>
+      <text>¥:{{product_price}}</text> 
+    </view>
+     <view class='maddletopma'>
+      <view>定制</view>
+      <text>预计下单3个工作日内发货</text>
+     </view>
+     <view class='maddleboto' bindtap="fuwushuom">
+        <view><image src='/img/xiangq.png'></image><text>不支持无理由退换</text></view>
+        <view style='margin-left:2% ;width:23%;'><image src='/img/xiangq.png'></image><text>正品保障</text></view>
+        <image style='width:38rpx;height:32rpx;margin-top:1.5%;margin-left:4%;' src='/img/right11.png'></image>
+        <!-- <text style='float:right;margin-top:1%;font-size:1em;'>></text> -->
+     </view>
+     <view style='width:100%;height:1px;background-color:#dadada;margin-top:5%;'></view>
+      <view class='maddlebo'><text>查看更多详情</text><text>V</text></view>
+        <!-- BEGIN PRICTURE DISPLAY -->
+          <view class='details'>
+            <block wx:key="{{item}}" wx:for="{{detailList}}">
+              <image style='margin:0 auto;' src="{{item.picture_url}}" class="slide-image" mode='widthFix'></image>
+            </block>
+          </view>
+          <view class='daodi'>
+            <text style='color:#eee;'>到底了</text>
+          </view>
+      <!-- <view class='zhanshi'><image src='/img/shopt.png'></image></view>
+      <view class='zhanshi'><image src='/img/shopt.png'></image></view>
+      <view class='zhanshi'><image src='/img/shopt.png'></image></view>
+      <view class='zhanshi'><image src='/img/shopt.png'></image></view> -->
+      <!-- BEGIN USER PULL UP -->
+    </view>
+    <!-- </scroll-view> -->
+  <!-- END MIDDLE PRICE NAME INTRODUCTION -->
+  <!-- BEGIN BOTTOM OPERATION -->
+  <view class='footer'>
+    <view  catchtap='clickasd'  class='footera'><image src='/img/detailscart.png'></image></view>
+    <view class='footera'>
+      <button  open-type='contact' class='huihua'>
+        <image  src='http://cdn.pengyoujuhui.com/kservice.png'></image>
+        <!-- <text style='margin-top:-20%;'>客服</text> -->
+      </button>
+    </view> 
+    <navigator url='/pages/brand/jrgwcx/jrgwcx?id={{product_id}}' > 
+     <text  class='footerb'  id='{{product_id}}'>加入购物车</text>
+     </navigator> 
+     <!-- catchtap='tian' -->
+     <!-- bindtap="submit" -->
+     <!-- <navigator url='/pages/brand/ljgmx/ljgmx?product_id={{product_id}}&product_price={{product_price}}&product_name={{product_name}}&icon_url={{icon_url}}'> -->
+     <navigator url='/pages/brand/jrgwcx/jrgwcx?id={{product_id}}' >
+     <text class='footerb' id='{{product_id}}'  style='background-color:#391315;color:#fff;width:32%'>开始定制</text></navigator>  
+  </view>
+  <!-- END BOTTOM OPERATION-->
+  <!-- BEGIN START THE LAYER -->
+  <view class='mask' catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <!-- BEGIN START THE LAYER TOP  -->
+    <view class='stltop'>
+        <image src='/img/shopt.png'></image>
+        <view class='stltopa'>
+          <view>Tailor Shop蓝色格子男士西服 {{item.name}}</view>
+          <text>¥ 1999.00{{item.price}}</text>
+        </view>
+        <text class='close' bindtap="go">×</text>
+    </view>
+    <view class='stlmaddle'>
+      <view class='stlmaddlea atlm'>
+        <view class='atlma'>颜色</view>
+        <text>黑色</text><text>白色</text><text>黄色</text>
+      </view>
+      <view class='stlmaddlea atlmaaa'>
+        <view class='atlma atlmaaa'>尺码</view>
+        <view class='stlmaddleb'><text>肩宽</text><text>60cm</text></view>
+        <view class='stlmaddleb'><text>臂长</text><text>90cm</text></view>
+        <view class='stlmaddleb'><text>腿长</text><text>120cm</text></view>
+        <view class='stlmaddleb'>.....</view>
+      </view>
+      <view class='stlmaddlea'>
+        <view class='atlma'>数量</view>
+        <view class='slbh'><text bindtap='addCount'>+</text><text>{{num}}</text><text bindtap='minusCount'>-</text></view>
+      </view>
+    </view>
+    <view id='{{product_id}}' class='ljpay'>立即购买</view>
+  </view>
+  <!-- BEGIN SERVICE DESCRIPTION -->
+    <view class='maskaa' catchtouchmove="preventTouchMove" wx:if="{{showModala}}"></view>
+    <view class="modalDlgaa" wx:if="{{showModala}}"> 
+      <view class="modalDlgab"><text style='margin-left:42%;'>服务说明</text><text style='float:right;margin-right:5%;' bindtap="goout">×</text></view>
+      <view class="modalDlgac">
+        <image src='/img/qwertgbn.png'></image>
+        <image src='/img/153508.png'></image>
+        <image src='/img/153507.png'></image>
+        <image src='/img/153.png'></image>
+      </view>
+    </view>
+</view>

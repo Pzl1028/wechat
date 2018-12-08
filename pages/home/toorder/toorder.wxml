@@ -1,0 +1,197 @@
+<view class='body'>
+  <view class='header'> 
+    <view class='headera'><text>*</text><label>姓名:</label><input type='text' name="namea" value="{{nick_name}}" bindinput='namea' placeholder="此姓名将被用于制作水洗标"></input></view>
+    <view class='headerb'><text>*</text><label>身高(cm)：</label><input type='text' name="nameb" value="{{height}}" bindinput='nameb' placeholder="例如180cm"></input></view>   
+    <view class='headerb'><text>*</text><label>体重(KG)：</label><input type='text' name="namec" value="{{weight}}" bindinput='namec' placeholder="例如70kg"></input></view>
+    <!-- <view class='headerb a'><label style='width:38%;'>性别：</label><input type='text' name="namej" value="{{sex}}" bindinput='namej' placeholder="例如男/女"></input></view>  -->
+    <view class='headerb'><text>*</text><label>领围(cm)：</label><input type='text' name="named" value="{{breadthing}}" bindinput='named' placeholder="例如50cm"></input></view>
+    <view class='headerb a'><label>臂长(cm)：</label><input type='text' name="namee" value="{{arm_length}}" bindinput='namee' placeholder="例如70cm"></input></view>
+    <view class='headerb a'><label>肩宽(cm)：</label><input type='text' name="namei" value="{{long_legs}}" bindinput='namei' placeholder="例如100cm"></input></view>
+    <view class='headerb a'><label>胸围(cm)：</label><input type='text' name="namef" value="{{hip_circumference}}" bindinput='namef' placeholder="例如60cm"></input></view>
+    <view class='headerb a'><label>腰围(cm)：</label><input type='text' name="nameg" value="{{waist_circumference}}" bindinput='nameg' placeholder="例如75cm"></input></view>
+    <view class='headerb a'><label>臀围(cm)：</label><input type='text' name="nameh" value="{{knee_circumference}}" bindinput='nameh' placeholder="例如80cm"></input></view>
+    
+  </view>
+<!-- BEGIN FAVORITE ELEMENTS --> 
+ 	<!-- <view class="nav bc_white">
+	    <view class="{{selected?'red':'default'}}" data-ida='0' bindtap="selected">男装</view>
+    	<view class="{{selected1?'red':'default'}}" data-idb='1' bindtap="selected1">女装</view>
+ 	</view> -->
+   <!-- BEGIN MEN'S WEAR -->
+  <!-- <view class="{{selected?'show':'hidden'}}"> -->
+  <!--ljgmx -->
+    <view class='maddleto'>
+      <view class='maddletoa'><text>*</text>{{ljgmx.key.type_name}}</view>
+      <view class='maddletoaasd'>
+        <block wx:for="{{ljgmx.val}}" wx:key="{{item.type_id}}">
+          <view class='maddletob'> 
+            <view >
+            <image bindtap='click' data-aba="{{item.id}}" style="{{item.id == aba?'border:1px solid #392315':''}}" src='{{item.icon_url}}'>
+            <!-- <image id='xuanzhong' data-aba="{{item.id}}" style="{{item.id == aba?'border:1px solid #392315':''}}" src='/img/isok.png' style='display:{{abc}};'></image> -->
+            </image>
+             </view>
+            <text>{{item.value}}</text>
+            <!-- <text>{{item.content}}</text> -->
+          </view>
+        </block>
+      </view> 
+    </view>
+    <!--ljgmx1 -->
+    <view class='maddleto'>
+      <view class='maddletoa'><text>*</text>{{ljgmx1.key.type_name}}</view>
+      <view class='maddletoaasd'>
+        <block wx:for="{{ljgmx1.val}}" wx:key="{{item.type_id}}">
+          <view class='maddletob'> 
+            <view >
+            <image bindtap='click1' data-abb="{{item.id}}" style="{{item.id == abb?'border:1px solid #392315':''}}" src='{{item.icon_url}}'></image> </view>
+            <text>{{item.value}}</text>
+            <!-- <text>{{item.content}}</text> -->
+          </view>
+        </block>
+      </view> 
+    </view>
+   
+    <!-- ljgmx2 -->
+    <view class='maddleto'>
+      <view class='maddletoa'><text>*</text>{{ljgmx2.key.type_name}}</view>
+      <view class='maddletoaasd'>
+        <block wx:for="{{ljgmx2.val}}" wx:key="{{item.type_id}}">
+          <view class='maddletob'> 
+            <view >
+            <image bindtap='click2' data-abc="{{item.id}}" style="{{item.id == abc?'border:1px solid #392315':''}}" src='{{item.icon_url}}'></image> </view>
+            <text>{{item.value}}</text>
+            <!-- <text>{{item.content}}</text> -->
+          </view>
+        </block>
+      </view> 
+    </view>
+    
+    <!--ljgmx3  -->
+    <view class='maddleto'>
+      <view class='maddletoa'><text>*</text>{{ljgmx3.key.type_name}}</view>
+      <view class='maddletoaasd'>
+        <block wx:for="{{ljgmx3.val}}" wx:key="{{item.type_id}}">
+          <view class='maddletob'> 
+            <view >
+            <image bindtap='click3' data-abd="{{item.id}}" style="{{item.id== abd?'border:1px solid #392315':''}}" src='{{item.icon_url}}'></image> </view>
+            <text>{{item.value}}</text>
+            <!-- <text>{{item.content}}</text> -->
+          </view>
+        </block>
+      </view> 
+    </view>
+    <!-- ljgmx4 -->
+    <view class='maddleto'>
+      <view class='maddletoa'><text>*</text>{{ljgmx4.key.type_name}}</view>
+      <view class='maddletoaasd'>
+        <block wx:for="{{ljgmx4.val}}" wx:key="{{item.type_id}}">
+          <view class='maddletob'> 
+            <view >
+            <image bindtap='click4' data-abe="{{item.id}}" style="{{item.id == abe?'border:1px solid #392315':''}}" src='{{item.icon_url}}'></image> </view>
+            <text>{{item.value}}</text>
+            <!-- <text>{{item.content}}</text> -->
+          </view>
+        </block>
+      </view> 
+    </view>
+  <!-- </view> -->
+  <!-- END MEN'S WEAR-->
+  <!-- BEGIN WOMEN'S CLOTHES -->
+  <!-- <view class="{{selected1?'show':'hidden'}}"> -->
+   <!-- ljgmxa -->
+    <!-- <view class='maddleto'>
+      <view class='maddletoa'><text>*</text>{{ljgmxa.key.type_name}}</view>
+      <view class='maddletoaasd'>
+        <block wx:for="{{ljgmxa.val}}" wx:key="{{item.type_id}}">
+          <view class='maddletob'> 
+            <view >
+            <image bindtap='clicka' data-ids="{{item.id}}" style="{{item.id == id?'border:1px solid #392315':''}}" src='{{item.icon_url}}'></image> </view>
+            <text>{{item.value}}</text>
+            <text>{{item.content}}</text>
+          </view>
+        </block>
+      </view> 
+    </view> -->
+    <!-- ljgmxb -->
+     <!-- <view class='maddleto'>
+      <view class='maddletoa'><text>*</text>{{ljgmxb.key.type_name}}</view>
+      <view class='maddletoaasd'>
+        <block wx:for="{{ljgmxb.val}}" wx:key="{{item.type_id}}">
+          <view class='maddletob'> 
+            <view>
+            <image  bindtap='clickb' data-ids1="{{item.id}}" style="{{item.id == ids1?'border:1px solid #392315':''}}" src='{{item.icon_url}}'></image> </view>
+            <text>{{item.value}}</text>
+            <text>{{item.content}}</text>
+          </view>
+        </block>
+      </view> 
+    </view> -->
+    <!-- ljgmxc -->
+     <!-- <view class='maddleto'>
+      <view class='maddletoa'><text>*</text>{{ljgmxc.key.type_name}}</view>
+      <view class='maddletoaasd'>
+        <block wx:for="{{ljgmxc.val}}" wx:key="{{item.type_id}}">
+          <view class='maddletob'> 
+            <view >
+            <image bindtap='clickc' data-ids2="{{item.id}}" style="{{item.id == ids2?'border:1px solid #392315':''}}" src='{{item.icon_url}}'></image> </view>
+            <text>{{item.value}}</text>
+            <text>{{item.content}}</text>
+          </view>
+        </block>
+      </view> 
+    </view> -->
+    <!--ljgmxd  -->
+     <!-- <view class='maddleto'>
+      <view class='maddletoa'><text>*</text>{{ljgmxd.key.type_name}}</view>
+      <view class='maddletoaasd'>
+        <block wx:for="{{ljgmxd.val}}" wx:key="{{item.type_id}}">
+          <view class='maddletob'> 
+            <view >
+            <image bindtap='clickd' data-ids3="{{item.id}}" style="{{item.id == ids3?'border:1px solid #392315':''}}" src='{{item.icon_url}}'></image> </view>
+            <text>{{item.value}}</text>
+            <text>{{item.content}}</text>
+          </view>
+        </block>
+      </view> 
+    </view> -->
+    <!-- ljgmxe -->
+     <!-- <view class='maddleto'>
+      <view class='maddletoa'><text>*</text>{{ljgmxe.key.type_name}}</view>
+      <view class='maddletoaasd'>
+        <block wx:for="{{ljgmxe.val}}" wx:key="{{item.type_id}}">
+          <view class='maddletob'> 
+            <view>
+            <image  bindtap='clicke' data-ids4="{{item.id}}" style="{{item.id == ids4?'border:1px solid #392315':''}}" src='{{item.icon_url}}'></image> </view>
+            <text>{{item.value}}</text>
+            <text>{{item.content}}</text>
+          </view>
+        </block>
+      </view> 
+    </view> -->
+    <!-- ljgmxf -->
+     <!-- <view class='maddleto'>
+      <view class='maddletoa'><text>*</text>{{ljgmxf.key.type_name}}</view>
+      <view class='maddletoaasd'>
+        <block wx:for="{{ljgmxf.val}}" wx:key="{{item.type_id}}">
+          <view class='maddletob'> 
+            <view >
+            <image bindtap='clickf' data-ids5="{{item.id}}" style="{{item.id ==ids5?'border:1px solid #392315':''}}" src='{{item.icon_url}}'></image> </view>
+            <text>{{item.value}}</text>
+            <text>{{item.content}}</text>
+          </view>
+        </block>
+      </view> 
+    </view> -->
+  <!-- </view> -->
+  <!-- END WOMEN'S CLOTHES -->
+
+
+
+
+
+  
+
+
+  <!-- <view class='mrsize'>设为默认尺寸</view> -->
+  <view class='footer' bindtap='submit'><text>完成</text></view>
+</view>

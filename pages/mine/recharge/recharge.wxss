@@ -1,0 +1,64 @@
+@import'../../style/style.wxss';
+.header{
+  width: 100%;
+  height: 25%;
+  padding-top: 5%;
+  background-color: #ccb2a3;
+}
+.header view{
+  width:100%;
+  height:30px;
+  text-align:left;
+  text-indent:1em;
+  font-size:16px;
+  margin-bottom:8%;
+}
+.header text{
+  width:20%;
+  height:35px;
+  margin:0 auto;
+  text-align:center;
+  font-size:40px;
+}
+
+
+
+
+
+.maddlett{
+  width: 92%;
+  height: 150px;
+  margin-left: 3%;
+}
+.maddletta{
+  width: 100%;
+  /* text-indent: 1em; */
+  font-size: 14px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.maddlettb{
+  width: 32.6%;
+  height: 50px;
+  float: left;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid;
+  color: #fff;
+}
+.footer{
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  background: #392315;
+}
+.footer text{
+  color: #fff;
+  line-height: 40px;
+  width: 20%;
+  margin: 0 auto;
+  /* background: red; */
+
+}

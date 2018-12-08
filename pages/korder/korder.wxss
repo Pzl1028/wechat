@@ -1,0 +1,316 @@
+@import '../style/style.wxss';
+ /* BAGIN PRCEIPT INFORMATION  */
+.header{
+  width: 100%;
+  /* height: 12%; */
+  background-color: #CCB2A3;
+  float: left;
+}
+.headerl{
+  width: 15%;
+  /* height: 60%; */
+  float: left;
+  margin-top:5.5%;
+}
+.headerl image{
+  width: 20px;
+  height: 36px;
+  margin: 0 auto;
+}
+
+.headerm{
+  /* width: 70%;
+  height: 100%; */
+  width: 80%;
+  float: left;
+  padding-bottom: 30rpx;
+}
+.headerma{
+  width: 100%;
+  height:40%;
+  margin-top: 2%;
+  float: left;
+}
+.headerma label{
+  float: left;
+  font-size: 15px;
+  margin-top: 5%;
+}
+.headerma text{
+  float: left;
+  font-size: 16px;
+  margin-top: 5%;
+}
+.headermb{
+  width: 100%;
+  height: 50%;
+}
+.headermb label{
+  display: inline-block;
+  font-size: 15px;
+  /* float:left; */
+}
+.headermb text{
+  display: inline-block;
+  /* float: left; */
+  font-size: 15px;
+}
+.headerr{
+  position:absolute;
+  top:2%;
+  right:2%;
+}
+.headerr image{
+  width:30rpx;
+  height:40rpx;
+  position: absolute;
+  right:5rpx;
+  top:32rpx;
+}
+/* BAGIN COMMODITY ORDER */
+.maddlea{
+  width: 100%;
+}
+.maddle{
+  width: 100%;
+  border-bottom: 4px solid #eee;
+  float: left;
+  padding-bottom: 28rpx;
+}
+.maddlel{
+  width: 35%;
+  height: 265rpx;
+  float: left;
+} 
+.maddlel image{
+  width: 75%;
+  height: 74%;
+  margin: 18% auto;
+}
+.maddler{
+  width: 65%;
+  height: 100%;
+  float: left;
+}
+.maddler text{
+    font-size: 16px;
+    margin-top: 5%;
+    color:#dadada;
+}
+/* .maddlern{
+  width: 100%;
+  height: 40%;
+} */
+.maddlen{
+  width: 100%;
+  font-size: 15px;
+  margin-top:8%;
+  line-height: 24px;
+}
+.maddlep{
+  width: 40%;
+  margin-top:5%;
+  float:left;
+  font-size:1.2em;
+}
+.information{
+  width: 60%;
+  float:left;
+  font-size:12px;
+  margin-top:9%;
+  text-align: right;
+  margin-left: -6%;
+}
+/* BEGIN CUSTOMER SEVERICE */
+.kservice{
+  width: 100%;
+  height: 6%;
+  border-bottom: 4px solid #eee;
+  float: left;
+  padding-bottom: 8rpx;
+}
+.kservice image{
+  width: 20px;
+  height: 20px;
+  margin-top: 3.2%;
+  margin-left: 38%;
+  float: left;
+  margin-right: 2%;
+}
+.kservice text{
+  height: 100%;
+  font-size:16px;
+  line-height:46px;
+}
+/* BEGIN RED PACKET */
+.packet{
+  width: 100%;
+  height: 5%;
+  border-bottom: 1px solid #eee;
+  float: left;
+}
+.packet text{
+  /* width:30%; */
+  height:100%;
+  float:left;
+  font-size:16px;
+  line-height:32px;
+  margin-left:4%;
+}
+.packet text:nth-child(2){
+  float: right;
+  text-align: right;
+  margin-right: 5%;
+}
+
+.packet image{
+  width:10px;
+  height:16px;
+  float:right;
+  margin-top:1.6%;
+  margin-right:4%;
+}
+/* BEGIN KORDER STATISTICS */
+.statistics{
+  width: 100%;
+  height: 20%;
+  border-bottom: 4px solid #eee;
+  float: left;
+}
+.statisticsa {
+  width: 100%;
+  height: 30%;
+  margin-top: 8rpx;
+}
+.statisticsa view{
+  font-size:16px;
+  margin-left:4%;
+  float:left;
+  line-height:35px;
+}
+.statisticsa text{
+  height:100%;
+  float:right;
+  font-size:16px;
+  /* margin-left:3%; */
+  line-height: 35px;
+  margin-right: 5%;
+}
+.statisticsb{
+  color: #dadada;
+}
+/* BEGIN PAYMENT METHOD */
+.payment{
+  width: 100%;
+  height: 14%;
+  float: left;
+  padding-bottom: 60px;
+  /* background-color: yellowgreen; */
+}
+.payment view{
+  width: 100%;
+  height: 50%;
+  float: left;
+  margin-top: 10rpx;
+}
+.payment image{
+  width:25px;
+  height:25px;
+  float:left;
+  margin-left:4%;
+  margin-top:2%;
+}
+.payment text{
+  width:30%;
+  height:100%;
+  float:left;
+  line-height:42px;
+  margin-left:6%;
+}
+/* BEGIN GO PAYMENT */
+.footer{
+  width: 100%;
+  height: 8%;
+  position: fixed;
+  bottom: 0;
+  border-top: 2px solid #dadada;
+  background: #fff;
+}
+.footer view{
+  float:left;
+  font-size:1.5em;
+  margin-top:2%;
+  margin-left:4%;
+}
+.footer text{
+  width:40%;
+  height:99%;
+  float:right;
+  background-color:#391315;
+  color:#fff;
+  text-align:center;
+  line-height:53px;
+  font-size:1.5em;
+}
+.cart-pro-select{
+  width:45rpx;
+  height:45rpx;
+  margin-left:44%;
+  margin-top:3%;
+}
+.payment radio{
+  margin-left: 44%;
+  padding-top: 15rpx;
+}
+.nima{
+  position:fixed;
+  top: 38%;
+  width:90%;
+  height:34%;
+  background: #fff;
+  border-top: 1px solid #eee;
+  left: 5%;
+  border-radius: 16px;
+}
+.nima view{
+  width: 100%;
+  margin: 15% auto;
+
+}
+.nima>view>label{
+  float:left;
+  width:100%;
+  font-size:1em;
+  text-align:center;
+  padding-bottom: 30rpx;
+}
+.nima>view>input{
+  width:61%;
+  border-bottom:1px solid #dadada;
+  margin:0 auto;
+  padding-top:6rpx;
+  text-align:center;
+}
+.nima text{
+ width:34%;
+  margin:0 auto;
+  background:#391315;
+  color:#fff;
+  text-align:center;
+  line-height:80rpx;
+  margin-top:-60rpx;
+  border-radius: 26px;
+}
+#guanbi{
+  float:right;
+  margin-right:60rpx;
+  margin-top:20rpx;
+  height: 30rpx;
+  width: 30rpx;
+}
+#mengban{
+  position: absolute;
+  width: 750rpx;
+  height: 100%;
+  background:rgba(0,0,0,0.8);
+}

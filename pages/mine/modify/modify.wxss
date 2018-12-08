@@ -1,0 +1,66 @@
+@import'../../style/style.wxss';
+.body{
+  padding-top: 5%;
+}
+.header{
+  width: 100%;
+  height: 30px;
+  color: #dadada;
+  text-indent: 1em;
+  font-size: 13px;
+}
+.maddle{
+  width: 95%;
+  height: 30px;
+  margin: 9% auto;
+  border-bottom:1px solid #dadada; 
+}
+.maddle label{
+  width: 27%;
+  height: 100%;
+  text-indent: 0.6em;
+  float: left;
+}
+.maddle input{
+  max-width: 42%;
+  height: 100%;
+  float: left;
+  line-height: 30px;
+  margin-left: 2%;
+}
+.maddle text{
+  width: 95px;
+  height: 77%;
+  line-height: 21px;
+  float: left;
+  background: #392315;
+  border: 1px solid #392315;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+}
+.maddlea{
+  width: 100%;
+  height: 30px;
+}
+
+.maddlea text:nth-child(1){
+  width: 11%;
+  color: #cfb3a5;
+  text-indent: 1em;
+  float: left;
+}
+.maddlea text:nth-child(2){
+  width:50%;
+  float: left;
+}
+.footer{
+  width: 95%;
+  height: 35px;
+  text-align: center;
+  margin: 10% auto;
+  background: #392315;
+  color: #fff;
+  line-height: 35px;
+}

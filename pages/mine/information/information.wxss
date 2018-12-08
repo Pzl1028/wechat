@@ -1,0 +1,204 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.body{
+  width: 100%;
+  height: 100%;
+}
+.body text{
+  display: block;
+}
+.body image{
+  display: block; 
+}
+/* 个人中心头部 */
+.header{
+  width: 100%;
+  height: 20%;
+  background-color: #CCB2A3;
+  border-bottom:5px solid #e8e8e8;
+}
+#headerl{
+  width: 16%;
+  height: 100%;
+  float: left;
+  margin-left:2%;
+}
+.wxtxd open-data{
+  width: 60px;
+  height: 60px;
+  display: block;
+  overflow: hidden;
+  border-radius:50%;
+}
+.wxtxd{
+  display: block;
+  width: 60px !important;
+  height: 60px !important;
+  float: left !important;
+  margin-top: 50%;
+}
+.headerma{
+  width: 40%;
+  height: 100%;
+  float: left;
+  font-size: 30rpx;
+  margin-left: 24rpx;
+}
+.wxmca{
+  width: 100%;
+  height: 25px;
+  float: left;
+  margin-top: 28%;
+  
+  /* margin-bottom: 2%; */
+}
+#headerl text{
+  height: 25px;
+  width: 176rpx;
+  float: left;
+  font-size: 16px;
+  margin-left: 7%;
+  
+
+}
+.headerr{
+  width: 34%;
+  height: 100%;
+  float: right;
+  margin-right:2%;
+}
+.headerr view{
+  width: 200rpx;
+  height: 50rpx;
+  float: right;
+  margin-top: 20%;
+}
+.headerr text{
+  height: 50rpx;
+  float: right;
+  margin-left: 6%;
+}
+
+/* 个人中心选项 */
+.footer{
+  width: 100%;
+  /* height: 460rpx; */
+  margin: 0 auto;
+}
+.xuangxiangk{
+  width: 100%;
+  height: 112rpx;
+  border-bottom:1px solid #e8e8e8;
+}
+.wxmc{
+  font-size: 16px;
+  float: right;
+  /* margin-top:4%; */
+  margin-right:3%;
+}
+.wxtx{
+  float: right;
+  margin-right:3%;
+  margin-top: 1%;
+}
+.wxtx open-data{
+  width: 40px;
+  height: 40px;
+  display: block;
+  overflow: hidden;
+  border-radius:50%;
+  margin-top: 5px;
+}
+.xuangxiangk text{
+  /* height: 50px; */
+  line-height: 56px;
+  /* float: left; */
+  margin-left: 4.5%;
+  width: 40%;
+  display: inline-block;
+}
+.tubiao{
+  float:right ;
+  margin-right:3%;
+  margin-top: 1%;
+  text-align: right;
+  width: 50%;
+  height:100rpx;
+  line-height:100rpx;
+}
+.xuangxiangk image{
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin-right:5%;
+  margin-top:4%;
+}
+
+
+  /* 不同手机兼容 */
+@media only screen and (max-width: 320px){ 
+  #headerl{
+    width: 54%;
+    height: 100%;
+    float: left;
+    margin-left:2%;
+  }
+  .wxtxd open-data{
+    width: 60px;
+    height: 60px;
+    display: block;
+    overflow: hidden;
+    border-radius:50%;
+  }
+  .wxtxd{
+    display: block;
+    width: 60px !important;
+    height: 60px !important;
+    float: left !important;
+    margin-top: 8% !important;
+  }
+  #headerl view{
+    margin-top: 10% !important;
+    margin-bottom: 2%;
+    margin-left: 5%;
+  }
+  #headerl text{
+    font-size: 12px;
+    margin-left: 5%;
+  }
+  .headerr{
+    width: 42%;
+  }
+  .headerr text{
+    font-size: 13px !important;
+    
+  }
+  .xuangxiangk text{
+    height: 42px;
+    line-height: 42px;
+    clear: both ;
+
+  }
+  .wxtx{
+    width: 40px !important;
+    height: 40px !important;
+    float: right;
+    margin-right:4%;
+    border-radius:50%;
+  }
+  .wxtx open-data{
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius:50%;
+  }
+  .wxmc{
+    font-size: 14px;
+  }
+  /* .xuangxiangk image{
+
+  } */
+}

@@ -1,0 +1,167 @@
+/* pages/mine/size/mysize/mysize.wxss */
+page{
+  background-color: #fbfbfb;
+}
+
+
+.heard{
+  width: 100%;
+  height: 105rpx;
+  border-bottom:solid;border-color: #3d2113;border-width: 3rpx;
+}
+
+.jiqi{
+  float: left;
+  width: 49.5%;
+  height: 100%;
+  text-align: center;
+}
+
+/* .jiqi:hover{
+  font-weight: 600;
+} */
+
+.Artificialinput{
+  /* float: right;
+  width: 49.9%;  */
+  height: 100%;
+  text-align: center;
+  }
+
+.Artificialinput:hover{
+  font-weight: 600;
+}
+
+
+.Verticalbar{
+ float: left;
+ width: 3rpx;
+ height: 80rpx;
+ margin-top: 12.6rpx;
+ background-color: #e1e1e1;
+}
+
+.jiqi_text1{
+  font-size: 30rpx;
+  line-height: 105rpx;
+}
+
+.intermediate{
+  width: 90%;
+  height: auto;
+  margin-left: 5%;
+  margin-top: 20rpx;
+}
+
+.name{
+  width: 100%;
+  height: 90rpx;
+  border-bottom:solid;border-color: #e5e5e5;border-width: 3rpx;
+  
+}
+
+.name_text1{
+  float: left;
+  font-size: 30rpx;
+  line-height: 90rpx;
+
+}
+
+.name_view1{
+  float: left;
+  width: 70rpx;
+  height: 35rpx;
+  font-size: 23rpx;
+  background-color:#3d2113;
+  text-align: center;
+  border-radius: 20rpx;
+  line-height: 35rpx;
+  margin-top: 27.5rpx;
+  margin-left: 10rpx;
+  color: #fff;
+  
+}
+
+
+
+.name_text2{
+  float: right;
+  font-size: 27rpx;
+  line-height: 90rpx;
+}
+
+.name_view2{
+ float: right;
+ width: 5rpx;
+ height:30rpx;
+ margin-top: 32rpx;
+ background-color: #3d2113;
+ 
+ }
+
+.name_view3{
+  float: left;
+  width: 100rpx;
+  height: 35rpx;
+  font-size: 23rpx;
+  text-align: center;
+  border-radius: 22rpx;
+  border:solid;
+  border-width: 3rpx;
+  line-height: 35rpx;
+  margin-top: 27.5rpx;
+  margin-left: 10rpx;
+  color: #3d2113;
+  
+}
+
+
+ .intermediate_view3{
+  width: 30%;
+  height:280rpx;
+  margin-top: 20rpx;
+  display: inline-block;
+
+ }
+
+  .intermediate_view4{
+  width: 70%;
+  height:280rpx;
+  margin-top: 20rpx;
+  display: inline-block;
+  
+ }
+
+ .intermediate_img1{
+   float: left;
+   width: 100%;
+   height: 280rpx;
+ }
+
+  .intermediate_view5{
+  width: 100%;
+  height:60rpx;
+  margin-top: 10rpx;
+ }
+
+ .intermediate_view6{
+   float: left;
+  width: 33.3%;
+  height:100%;
+
+
+ }
+
+ .intermediate_text1{
+    font-size: 23rpx;
+    line-height: 60rpx;
+    margin-left: 10rpx;
+ }
+
+ .both{
+   width:100%;
+   height: 6rpx;
+   margin-top: 40rpx;
+   background-color: #e5e5e5;
+   margin-bottom: 30rpx;
+ }

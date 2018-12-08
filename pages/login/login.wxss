@@ -1,0 +1,122 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.body{
+  width: 100%;
+  height: 100%;
+  /* padding-top: 28%; */
+}
+.headera{
+  width: 40%;
+  height: 14%;
+  margin: 0 auto; 
+}
+#header{
+  width: 44%;
+  height: 20%;
+  /* padding-top: 10%; */
+  /* border: 1px solid red; */
+  margin: 0 auto;
+}
+#header image{
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  height: 190rpx;
+}
+
+.getuser{
+  width: 100%;
+  height: 100rpx;
+  background-color: transparent;
+  position: fixed;
+  top: 600rpx;
+}
+
+@media only screen and (max-width: 320px) {
+  .headera{
+    height: 5% !important;
+    /* background-color: red; */
+  }
+  .maddle input{
+    margin-top: 5% !important;
+    font-size: 14px !important;
+  }
+  .actionb button{
+    font-size: 24px !important;
+  }
+}
+.maddle{
+  width: 80%;
+  height:50%;
+  /* border: 1px solid yellowgreen; */
+  margin: 10% auto;
+}
+.maddle input{
+  width: 100%;
+  height: 35px;
+  margin-top: 4%;
+  font-size: 16px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.maddle .actionc{
+  width: 100%;
+  height: 40px;margin-top: 5%;
+  text-align: right;
+  font-size: 14px;
+}
+.maddle text{
+  display: block;
+  float: right;
+  color: #9b9b9b;
+  margin-left: 2%;
+}
+.actionb button{
+  width: 22%;
+  height: 20px;
+  text-align: center;
+  color: #392315;
+  border-radius: 0; 
+  line-height: 20px;
+  font-size: 22px;
+  background-color: #fff;
+  border-left: 1px solid #392315; 
+  border-right: 1px solid #392315; 
+  margin: 5% auto;
+}
+button{
+  border-radius: 0;
+  padding: 0 !important;
+}
+button::after{
+  border-radius: 0;
+  border:0;
+}
+button:hover{
+  background-color: #fff !important;
+}
+.footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  font-size: 14px;
+  color: #9b9b9b;
+  text-align: center;
+}
+.wxdl{
+  width: 100%;
+  position: fixed;
+  bottom: 50%;
+  font-size: 14px;
+  color: #9b9b9b;
+  text-align: center;
+}
+#wxdl{
+  background: #fff;
+}
+#wxdl image{
+  width: 420rpx;
+  height: 70rpx;
+  margin: 0 auto;
+}

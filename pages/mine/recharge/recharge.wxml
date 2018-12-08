@@ -1,0 +1,16 @@
+<view class='body'>
+  <view class='header'>
+      <view>可用额度：</view> 
+      <text>¥:{{balance}}</text>
+  </view> 
+   <view class='maddlett'>
+    <view class='maddletta' hover-class='background-color:red;'>进行充值</view>
+    <block wx:for="{{pres}}" wx:key="{{}}">
+      <view class='maddlettb' data-asd='{{item.amount}}' bindtap='click' data-id="{{item.id}}" style="{{item.id == id?'background-color:#392315':'color:#dadada'}}">{{item.amount}}元</view>
+    </block>
+  </view> 
+  <view class='footer'>
+    <!-- <image src=''></image> -->
+    <text bindtap='recharge'>微信支付</text>
+  </view>
+</view>

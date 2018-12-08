@@ -1,0 +1,19 @@
+<view class='body'>
+ <view class='header'>设置支付密码需要向您的手机{{mobile}}发送验证码</view>
+  <view class='maddle'>
+    <label>验证码</label>
+    <input  type='text' bindinput='code'  placeholder='请输入验证码'></input>
+    <text bindtap='yzm'>获取验证码</text>
+  </view>
+<view class='maddlea'><text>*</text><text>密码必须是8位数字</text></view>
+  <view class='maddle'>
+    <label>输入密码</label>
+    <input type='password' maxlength='8' bindinput='passworda' placeholder='请输入密码'></input>
+  </view>
+  <view class='maddle'>
+    <label>确认密码</label>
+    <input type='password' maxlength='8' bindinput='passwd' placeholder='请确认密码'></input>
+  </view>
+  <view class='footer' bindtap='click'>确认 </view>
+
+</view>

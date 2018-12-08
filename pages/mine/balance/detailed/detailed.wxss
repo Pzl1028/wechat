@@ -1,0 +1,34 @@
+@import'/pages/style/style.wxss';
+.maddle{
+  width: 96%;
+  height: 14%;
+  border-bottom: 1px solid #dadada;
+  margin: 0 auto;
+}
+.maddlel{
+  width: 69%;
+  height: 80%;
+  float: left;
+  padding-right:5%;
+  border-right:1px solid;
+}
+.maddlel view{
+  width: 100%;
+  font-size: 15px;
+  margin-bottom: 2%;
+}
+.maddlel text{
+  width: 100%;
+  font-size: 12px;
+  color: #dadada;
+  margin-bottom: 2%;
+}
+.maddler{
+  width: 25%;
+  height: 80%;
+  float: left;
+  text-align: center;
+}
+.maddler text{
+  line-height: 126rpx;
+}

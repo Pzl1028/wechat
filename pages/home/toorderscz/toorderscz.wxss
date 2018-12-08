@@ -1,0 +1,86 @@
+@import'../toorder/toorder.wxss';
+.headeraa{
+  width: 100%;
+  height: 12%;
+  background-color: #CCB2A3;
+}
+.headerl{
+  width: 15%;
+  height: 60%;
+  float: left;
+  margin-top:5.5%;
+  /* position: absolute; */
+}
+.headerl image{
+  width: 20px;
+  height: 36px;
+  margin: 0 auto;
+}
+.headerm{
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+.headerma{
+  width: 100%;
+  height:40%;
+  margin-top: 2%;
+  float: left;
+}
+.headerma label{
+  float: left;
+  font-size: 15px;
+  margin-top: 5%;
+}
+.headerma text{
+  float: left;
+  font-size: 16px;
+  margin-top: 5%;
+}
+.headermb{
+  width: 100%;
+  height: 50%;
+}
+.headermb label{
+  display: block;
+  font-size: 15px;
+  float: left;
+}
+.headermb text{
+  width: 70%;
+  float: left;
+  font-size: 15px;
+}
+.headerr{
+  width: 14%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+.headerr image{
+  width:30rpx;
+  height:40rpx;
+  margin-top:6%;
+  position:absolute;
+  right:5%;
+}
+.maddlett{
+  width: 92%;
+  height: 150px;
+  margin-left: 3%;
+}
+.maddletta{
+  width: 100%;
+  /* text-indent: 1em; */
+  font-size: 14px;
+  margin-bottom: 2%;
+}
+.maddlettb{
+  width: 32.6%;
+  height: 40px;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid;
+  color: #fff;
+}

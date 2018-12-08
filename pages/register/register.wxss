@@ -1,0 +1,158 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.body{
+  width: 100%;
+  height: 100%;
+  /* padding-top: 28%; */
+} 
+.headera{
+  width: 40%;
+  height: 8%;
+  margin: 0 auto;
+}
+#header{
+  width: 44%;
+  height: 20%;
+  /* padding-top: 10%; */
+  /* border: 1px solid red; */
+  margin: 0 auto;
+}
+#header image{
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  height:190rpx;
+}
+@media only screen and (max-width: 320px) {
+  .headera{
+    height: 10% !important;
+    /* background-color: red; */
+  }
+  .maddle input{
+    margin-top: 2% !important;
+  }
+  .shoujiyz button{
+    font-size: 16px !important;
+    height: 28px !important;
+    line-height: 28px !important;
+  }
+   .actionb button{
+    font-size: 24px !important;
+  }
+  .maddle{
+    margin: 0 auto !important;
+    height: 45% !important;
+  }
+}
+.maddle{
+  width: 80%;
+  height:50%;
+  /* border: 1px solid yellowgreen; */
+  margin: 10% auto;
+}
+.shoujiyz{
+  width: 100%;
+  height: 40px;
+  /* margin-top: 4%; */
+  border-bottom: 1px solid #f2f2f2;
+}
+.shoujiyz input{
+  width:70% !important;
+  height: 100%;
+  margin-top: 0 !important;
+  border-bottom: none !important;
+  /* display: block; */
+  float: left;
+}
+.shoujiyz button{
+  width: 30%;
+  height: 80%;
+  display: block;
+  float: right;
+  color: #392315;
+  background-color: #fff;
+  border: 1px solid #392315;
+  border-radius:20px;
+  line-height:32px;
+  font-size: 15px;
+}
+#btni{
+  width:30%;
+  height:64rpx;
+   float:left;
+}
+#btni text{
+  width:100%;
+  font-size:12px;
+}
+.maddle input{
+  width: 100%;
+  height: 33px;
+  font-size: 15px;
+  margin-top: 2%;
+  border-bottom: 1px solid #f2f2f2;
+}
+.maddle .actionc{
+  width: 100%;
+  height: 40px;margin-top: 5%;
+  text-align: right;
+  font-size: 14px;
+}
+.maddle text{
+  display: block;
+  float: right;
+  color: #9b9b9b;
+  margin-left: 2%;
+}
+.actionb button{
+  width: 28%;
+  height: 26px;
+  text-align: center;
+  color: #392315;
+  border-radius: 0;
+  line-height: 26px;
+  font-size: 22px;
+  background-color: #fff;
+  /* border: none !important; */
+  border-left: 1px solid #392315; 
+  border-right: 1px solid #392315; 
+  margin: 5% auto;
+}
+button{
+  border-radius: 0;
+  padding: 0 !important;
+}
+button::after{
+  border-radius: 0;
+  border:0;
+}
+button:hover{
+  background-color: #fff !important;
+}
+.footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  font-size: 14px;
+  color: #9b9b9b;
+  text-align: center;
+}
+
+@media only screen and (max-width: 320px){ 
+  .footerb{
+    line-height: 38px;
+  }
+  .footer image{
+    width:16px;
+    height: 16px;
+  }
+  .footer view{
+    margin-top: 1%;
+  }
+  .footera text{
+    font-size:11px;
+  }
+}
+

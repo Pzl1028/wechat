@@ -1,0 +1,23 @@
+<view class='body'>
+  <!-- <view class='div' style='display:{{asdasd}}'>
+  <image catchtap='click' src='/img/shanchu.png'></image>
+  <navigator url="/pages/login/login">
+    <image id='asd' src='http://cdn.pengyoujuhui.com/dfydz/hongbao.png'></image></navigator>
+  </view>  -->
+  <view class='headera'>
+  </view>
+  <view class='header'>
+    <image src='/img/264968570381550591.png'></image>
+  </view>
+  <view class='maddle'>
+  
+    <navigator url='/pages/login/login'>
+    <view>Login</view>
+    </navigator>
+    <navigator url='/pages/register/register'>
+    <view>Register</view>
+    </navigator>
+  </view>
+  <!-- <view class='footer'><text>上海市服装研究所有限公司</text></view> -->
+</view>
+

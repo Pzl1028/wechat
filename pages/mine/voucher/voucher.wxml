@@ -1,0 +1,54 @@
+<view class='body'>
+    <!-- 可使用的优惠劵 -->
+    <block  wx:for="{{voucher}}" wx:key="item.ec_id">
+    <view class='header' data-id="{{item.ec_id}}" data-amount="{{item.discount_amount}}"   catchtap='click'>
+        <view class='headera'>
+          <text>{{item.ec_code}}</text>
+          <view class='headeras'>
+            <text>{{item.create_time}}</text>
+            <text>至</text>
+            <text>{{item.end_time}}</text>
+          </view> 
+        </view>  
+        <view class='headerb'>
+          <image src='/img/2018930.png'></image>
+          <text>Tailor Shop</text>
+        </view>
+        <text class='headerc'>{{item.discount_amount}}</text>
+      </view>
+    </block>
+  <!-- 已使用的优惠劵 -->
+<view style='display:none;'>{{list}}</view>
+<view style='display:none'>{{product_pricea}}</view>
+<view class='footer' style='display:{{asd}}'>暂无优惠劵可使用</view>
+
+  <!-- <view class='header'>
+    <view class='headera'>
+      <text>456321222222222222222</text>
+      <view class='headeras'>
+        <text>2018年8月27日</text>
+        <text>至</text>
+        <text>2018年9月5日</text>
+      </view>
+    </view>
+    <view class='headerb'>
+      <image src='/img/empty.png'></image>
+      <text>Tailor Shop</text>
+    </view>
+    <text class='headerc'>80</text>
+  </view> -->
+<!-- 
+  <view class='header headeraa'>
+    <view class='headera headerab'>
+      <text>456321222222222222222</text>
+      <text>2018年8月27日至2018年9月5日</text>
+    </view>
+    <view class='headerb headerac'>
+      <image src='/img/empty.png'></image>
+      <text>Tailor Shop</text>
+    </view>
+    <text class='headerc headerad'>80</text>
+    <image class='guoqi ' src='/img/guoq.png'></image>
+  </view> -->
+
+</view>

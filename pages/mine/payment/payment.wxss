@@ -1,0 +1,47 @@
+@import'../../style/style.wxss';
+.body{
+  padding-top: 5%;
+}
+.header{
+  width: 95%;
+  height: 12%;
+  margin: 5% auto;
+  border-bottom: 1px solid #dadada;
+}
+.headera{
+  width: 77%;
+  height: 80%;
+  float: left;
+  border-right: 1px solid #dadada;
+}
+.headera view{
+  width: 100%;
+  font-size: 11px;
+}
+.headera text{
+  color: #dadada;
+  font-size: 12px;
+}
+.headerb{
+  width:20%;
+  float:left;
+  margin-top:3%;
+}
+.rechange{
+  width: 95%;
+  height:12%;
+  margin: 0 auto;
+  border-bottom: 1px solid #dadada;
+}
+.rechangea{
+  width: 77%;
+  height: 80%;
+  float: left;
+  line-height: 50px;
+  border-right: 1px solid #dadada;
+}
+.rechangeb{
+  width:20%;
+  float:left;
+  margin-top:3%;
+}

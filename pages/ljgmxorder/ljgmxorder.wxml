@@ -1,0 +1,91 @@
+<view class='body'>
+  <!-- BAGIN PRCEIPT INFORMATION -->
+  <view class='header'>
+      <view class='headerl'><image src='/img/orderposition.png'></image></view>
+      <view class='headerm' wx:if="{{hasAddress}}">
+        <view class='headerma'><label>收货人：</label><text>{{address.consignee}}</text><text style='margin-left:4%;'>{{address.phone}}</text></view>
+        <view class='headermb'><label style='font-size:15px;'>收货地址：</label><text>{{address.area}}{{address.detail}}</text></view>
+      </view>
+      <view class='headerr'><navigator url='/pages/mine/addresss/addresss'><image src='/img/right11.png'></image></navigator></view>
+  </view>
+  <!-- END RECEIPT INFORMATION -->
+  <!--BAGIN COMMODITY ORDER  -->
+  <!-- 购物车产品信息 --> 
+  <block  wx:for='{{selected_list}}' wx:key='{{item.product_id}}'>
+    <view class='maddle' id="1" style='display:{{qweqwe}}'>
+      <view class='maddlel'><image src='{{item.icon_url}}'></image></view>
+      <view class='maddler'>
+        <view class='maddlen'>{{item.product_name}}</view>
+        <text> 数量 x1{{item.product_amount}}</text>
+        <view data-ec='{{ec_id}}' class='maddlep'>¥ {{item.product_price}}</view>
+        <view class='information'>不支持7天无理由退换</view>
+      </view>
+    </view>
+  </block>
+    <!-- 订单产品信息 -->
+  <!-- <block  wx:for='{{selected}}' wx:key='{{product_id}}'> -->
+  <!-- </block> -->
+  <!--END COMMODITY ORDER  -->
+  <!-- BEGIN CUSTOMER SEVERICE -->
+  <!-- <view class='kservice'><image src='http://cdn.pengyoujuhui.com/kservice.png'></image><text>在线客服</text></view> -->
+  <button open-type='contact' style='border-radius:none;' class='kservice'>
+    <image  src='http://cdn.pengyoujuhui.com/kservice.png'></image>
+    <text>在线客服</text>
+  </button>
+  <!-- END CUSTOMER SEVERICE -->
+  <!-- BEGIN RED PACKET -->
+  <!-- <view class='packet' style='display:{{kordera}}' catchtap='useCoupons' ><text>使用红包</text><text>-{{discount}}</text></view> -->
+  <!-- <view class='packet' style='display:{{korderb}}' ><text>此商品不可使用红包</text><text></text></view> -->
+  <!-- END RED PACKET -->
+  <!-- BEGIN KORDER STATISTICS -->
+  <view class='statistics'>
+    <view class='statisticsa'><view>商品总计</view><text>¥{{total}}</text><text>共{{}}1件</text></view>
+    <!-- <view class='statisticsa statisticsb'><view>订单运费</view><text>0{{}}</text></view> -->
+    <!-- <view class='statisticsa statisticsb'><view>优惠劵</view><text>0{{}}</text></view> -->
+  </view>
+  <!-- END KORDER STATISTICS -->
+  <view class='size'>
+    <view class='sizea'><text>姓名:{{name}}</text><text>身高:{{height}}cm</text><text>体重:{{weight}}kg</text></view>
+    <view class='sizea'><text>姓别:{{sex}}</text><text>领围:{{breadth}}cm</text><text>臂长:{{arm_length}}cm</text></view>
+    <view class='sizea' style='border-bottom:4px solid #eee;'><text>胸围:{{hip_circumference}}cm</text><text>腰围:{{waist_circumference}}cm</text><text>肩宽:{{long_legs}}cm</text></view>
+  </view>
+
+
+  <!-- BEGIN PAYMENT METHOD -->
+  <view class='payment'>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <block class="radio" wx:for="{{cartss}}">
+          <view>
+            <image src='{{item.image}}'></image>
+            <text>{{item.name}}</text>
+            <radio value="{{item.idasd}}" checked="{{item.checked}}"/>
+          </view>
+        </block>
+      </radio-group>
+  </view>
+
+  <!-- END PAYMENT METHOD -->
+  <!-- BEGIN GO PAYMENT -->
+  <view style='width:100;height:110rpx;float: left;'></view>
+  <view class='footer'>
+    <view>¥{{total}}</view>
+    <text catchtap='tijiaodd' bindtap="toPay">确认</text>
+  </view>
+  <!-- END GO PAYMENT -->
+  <!-- <view id='mengban' style='display:{{iasasd}}'>
+    <view class='nima' >
+      <text id='guanbi' bindtap='guanbi'>x</text>
+      <view><label>请输入支付密码</label><input type='password' maxlength='8' bindinput='passworda' ></input></view>
+      <text bindtap='qurren'>确认</text>
+    </view>
+  </view> -->
+
+<view id='mengban' style='display:{{iasasd}}'>
+    <view class='nima' >
+      <image id='guanbi' bindtap='guanbi' src='/img/shanchu.png'></image>
+      <view><label>请输入支付密码</label><input type='password' maxlength='8' bindinput='passworda' ></input></view>
+      <text bindtap='qurren'>确认</text>
+    </view>
+  </view>
+  <view id='{{product_id}}' style='display:none;'>{{skuu}}</view>
+</view>

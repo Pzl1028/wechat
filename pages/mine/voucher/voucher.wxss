@@ -1,0 +1,112 @@
+@import'../../style/style.wxss';
+.body{
+  padding-top: 2%;
+}
+.header{
+  width: 95%;
+  height: 29%;
+  background: #392315;
+  margin: 2% auto;
+}
+.headera{
+  width: 12%;
+  height: 100%;
+  float: left;
+  border-right: 1px dashed #fff;
+}
+.headera text{
+  writing-mode: vertical-rl;
+  float:right;
+  font-size:12px;
+  color:#fff;
+  margin-top: 14%;
+}
+.headera text:nth-child(1){
+  margin-top: 30%;
+}
+/* .headera text:nth-child(2){
+  font-size: 12px;
+} */
+.headeras{
+  float: right;
+  width: 16px;
+}
+
+.headeras text:nth-child(1) {
+  height:86px; 
+  overflow: hidden;
+  width:16px;
+
+}
+.headeras text:nth-child(3) {
+  height:86px; 
+  overflow: hidden;
+  width:16px;
+}
+.headerb{
+  width: 50%;
+  height: 80%;
+  float: left;
+  border: 2px solid #fff;
+  margin-left:5%;
+  margin-top:5%;
+}
+.headerb image{
+    width: 240rpx;
+    height:124rpx;
+    margin:0 auto;
+    padding-top: 44rpx;
+
+}
+.headerb text{
+  color: #fff;
+  font-size:1.5em;
+  width: 100%;
+  text-align: center; 
+}
+.headerc{
+  width: 20%;
+  /* height: 100%; */
+  font-size: 3em;
+  float: left;
+  color: #fff;
+  margin-top: 16%;
+  margin-left: 7%;
+}
+
+/*  */
+.headeraa{
+  width: 94%;
+  background-color: #fff;
+  border: 2px solid #dadada;
+  margin: 5% auto;
+}
+.headerab{
+  border-right: 1px dashed #dadada;
+}
+.headerab text{
+  color: #dadada;
+}
+.headerac{
+  border: 1px solid #dadada;
+
+}
+.headerac text{
+  color: #dadada;
+}
+.headerad{
+  color: #dadada;
+}
+.guoqi{
+  width: 30%;
+  height: 34%;
+  position: absolute;
+  margin-left: 53%;
+}
+.footer{
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  padding-top: 100rpx;
+  padding-bottom: 100rpx;
+}

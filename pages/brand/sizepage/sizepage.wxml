@@ -1,0 +1,28 @@
+<view class='body'>
+   <view class='header'> 
+    <view><text>姓名：{{ace}}</text><text>身高:{{acea}}cm</text></view>
+    <view><text>体重:{{aceb}}kg</text>
+    <!-- <text>肩宽:{{item.breadth}}cm</text><text>臂长：{{item.arm_length}}cm</text></view>
+    <view><text>胸围:{{item.hip_circumference}}cm</text><text>腰围:{{item.waist_circumference}}cm</text><text>臀围:{{item.knee_circumference}}cm</text></view>
+    <view><text>腿长:{{item.long_legs}}cm</text>-->
+    
+    </view> 
+    <!-- <view class='headera'><text>*</text><label>姓名: </label><input type='text' value="{{item.nick_name}}" placeholder="此姓名将被用于制作水洗标"></input></view>
+    <view class='headerb'><text>*</text><label>身高：</label><input type='text' value="{{item.height}}cm" placeholder="例如180cm"></input></view>
+    <view class='headerb'><text>*</text><label>体重：</label><input type='text' value="{{item.weight}}KG" placeholder="例如70kg"></input></view>
+    <view class='headerb'><text>*</text><label>肩宽：</label><input type='text' value="{{item.breadth}}cm" placeholder="例如50cm"></input></view>
+    <view class='headerb'><text>*</text><label>臂长：</label><input type='text' value="{{item.arm_length}}cm" placeholder="例如70cm"></input></view>
+    <view class='headerb'><text>*</text><label>胸围：</label><input type='text' value="{{item.hip_circumference}}cm" placeholder="例如60cm"></input></view>
+    <view class='headerb'><text>*</text><label>腰围：</label><input type='text' value="{{item.waist_circumference}}cm" placeholder="例如75cm"></input></view>
+    <view class='headerb'><text>*</text><label>臀围：</label><input type='text' value="{{item.knee_circumference}}cm" placeholder="例如80cm"></input></view>
+    <view class='headerb'><text>*</text><label>腿长：</label><input type='text' value="{{item.long_legs}}cm" placeholder="例如100cm"></input></view> -->
+  </view>
+  <view style='width:100%;height:10px;background-color:#dadada;margin-top:-7%;margin-bottom:5%;'></view>
+    <!-- <text>如果你爱上了别人请别告诉我
+我已没有当初爱上你时的勇敢
+</text> -->
+  <!-- <text>?id={{item.id}}&arm_length={{item.arm_length}}&nick_name={{item.nick_name}}&height={{item.height}}&weight={{item.weight}}&breadth={{item.breadth}}&hip_circumference={{item.hip_circumference}}&waist_circumference={{item.waist_circumference}}&knee_circumference=={{item.knee_circumference}}&long_legs+{{item.long_legs}}'</text> -->
+
+  <navigator url='/pages/home/toorder/toorder'>
+  <view class='footer' >新建尺寸</view> </navigator>
+</view>

@@ -1,0 +1,36 @@
+<view class='body'>
+  <view class='header'>
+    <view class='headera'><text>*</text><label>姓名:</label><input type='text' name="namea" value="{{namea}}" placeholder="此姓名将被用于制作水洗标"></input></view>
+    <view class='headerb'><text>*</text><label>身高(cm)：</label><input type='text' name="nameb" value="{{height}}" placeholder="例如180"></input></view>  
+    <view class='headerb'><text>*</text><label>体重(KG)：</label><input type='text' name="namec" value="{{weight}}" placeholder="例如70"></input></view>
+    <view class='headerb a'><label>肩宽(cm)：</label><input type='text' name="named" value="{{breadth}}"  placeholder="例如50"></input></view>
+    <view class='headerb a'><label>臂长(cm)：</label><input type='text' name="namee" value="{{arm_length}}"  placeholder="例如70"></input></view>
+    <view class='headerb a'><label>胸围(cm)：</label><input type='text' name="namef" value="{{chest}}" placeholder="例如60"></input></view>
+    <view class='headerb a'><label>腰围(cm)：</label><input type='text' name="nameg" value="{{waist_circumference}}" placeholder="例如75"></input></view>
+    <view class='headerb a'><label>臀围(cm)：</label><input type='text' name="nameh" value="{{hip_circumference}}"  placeholder="例如80"></input></view>
+    <view class='headerb a'><label>腿长(cm)：</label><input type='text' name="namei" value="{{long_legs}}"  placeholder="例如100"></input></view>
+  </view>
+  <view style='width:100%;height:10px;background-color:#dadada;margin-top:-7%;margin-bottom:5%;'></view>
+    <!-- dizhi -->
+   <view class='headeraa'>
+    <view class='headerl'><image src='/img/orderposition.png'></image></view>
+    <view class='headerm' wx:if="{{hasAddress}}">
+      <view class='headerma'><label>收货人：</label><text>{{address.consignee}}</text><text style='margin-left:4%;'>{{address.phone}}</text></view>
+      <view class='headermb'><label>收货地址：</label><text>{{address.area}}{{address.detail}}</text></view>
+    </view>
+    <view class='headerr'><navigator url='/pages/mine/addresss/addresss'><image src='/img/right11.png'></image></navigator></view>
+  </view>
+<!-- BEGIN CONDUCT RECHARGE-->
+  <view class='maddlett'>
+    <view class='maddletta' hover-class='background-color:red;'>进行充值</view>
+    <block wx:for="{{pres}}"  wx:key="{{}}">
+      <view class='maddlettb' data-asd='{{item.pre}}' bindtap='click' data-id="{{item.id}}" style="{{item.id == id?'background-color:#392315':'color:#dadada'}}">{{item.pre}}元/套</view>
+    </block>
+  </view>
+ 
+ 
+ 
+
+
+  <view class='footer' bindtap='clicka'><text>下一步</text></view>
+</view>

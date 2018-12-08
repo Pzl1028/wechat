@@ -1,0 +1,14 @@
+<view class='body'>
+    <view class='header'>
+      <view class='headera'>
+        <view> DEVIL BEAUTY HOMME黑色基础款两粒扣西装 男款</view>
+        <text>下单时间：2018/8/21 12:30:33</text>
+        <text>订单编号：1915716325324612</text>
+      </view>
+      <text class='headerb'>-1999.00</text>
+    </view>
+    <view class='rechange'>
+      <view class='rechangea'>微信充值成功</view>
+      <text class='rechangeb'>+200</text>
+    </view>
+</view>

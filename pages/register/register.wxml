@@ -1,0 +1,37 @@
+<view class='body'>
+  <view class='headera'></view>
+  <view id='header'>
+    <image src="http://cdn.pengyoujuhui.com/dfydz/dfydz.jpg"></image>
+  </view> 
+  <view class='maddle'>
+      <form class='formsubmit'>
+       <view class='shoujiyz'>
+          <input type='number' bindinput="accounts" maxlength='11' value="{{login.phone}}"  name="accounts"  placeholder='请输入手机号'></input>
+          <block wx:if="{{disabled}}">
+            <button class='hqyzm' type='primary' formtype="yanzheng" catchtap='getCode'>获取验证码</button>
+          </block>
+          <view id='btni' wx:else>
+            <text >{{countDownNum}}s后再次获取</text>
+          </view>
+        </view>         
+        <input type='number' bindinput="code" maxlength='11' value="{{login.phone}}"  name="code" class='put' placeholder='请输入验证码'></input>
+        <input type='password' bindinput="password" name="password" class='put' placeholder='请输入密码'></input>
+        <input type='password' bindinput="passwordq" name="passwordq" class='put' placeholder='请再次输入密码'></input>
+        <view class='actionc'>       
+          <navigator url='/pages/login/login'>
+            <text>登录</text>
+          </navigator>
+        </view>
+        <view class='actionb' catchtap='register'>     
+          <button type='primary'  formType="submit">注册</button>
+        </view>
+      </form>
+  </view>
+  <view class='footer'><text>上海市服装研究所有限公司</text></view>
+</view>
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+<view class='body'>
+  <view class='header'>
+    <view class='headera'><text>*</text><label>姓名:</label><input type='text' name="namea"  bindinput='namea' placeholder="此姓名将被用于制作水洗标"></input></view>
+    <view class='headerb'><text>*</text><label>身高：</label><input type='text' name="nameb" bindinput='nameb' placeholder="例如180cm"></input></view>
+    <view class='headerb'><text>*</text><label>体重：</label><input type='text' name="namec" bindinput='namec' placeholder="例如70kg"></input></view>
+    <view class='headerb'><text>*</text><label>肩宽：</label><input type='text' name="named" bindinput='named' placeholder="例如50cm"></input></view>
+    <view class='headerb'><text>*</text><label>臂长：</label><input type='text' name="namee" bindinput='namee' placeholder="例如70cm"></input></view>
+    <view class='headerb'><text>*</text><label>胸围：</label><input type='text' name="namef" bindinput='namef' placeholder="例如60cm"></input></view>
+    <view class='headerb'><text>*</text><label>腰围：</label><input type='text' name="nameg" bindinput='nameg' placeholder="例如75cm"></input></view>
+    <view class='headerb'><text>*</text><label>臀围：</label><input type='text' name="nameh" bindinput='nameh' placeholder="例如80cm"></input></view>
+    <view class='headerb'><text>*</text><label>腿长：</label><input type='text' name="namei" bindinput='namei' placeholder="例如100cm"></input></view>
+  </view>
+  <view class='footer'>
+    <text>保存</text>
+   </view>
+
+</view>

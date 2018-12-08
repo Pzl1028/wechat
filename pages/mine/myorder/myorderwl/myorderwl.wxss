@@ -1,0 +1,60 @@
+@import'/pages/style/style.wxss';
+.header{
+  width: 100%;
+  height: 20%;
+  border-bottom:4px solid #f1f1f1;
+}
+.headerl{
+  width: 20%;
+  height: 80%;
+  float: left;
+  margin-left: 4%;
+}
+.headerl image{
+  width: 100%;
+  height: 100%;
+}
+.headerm{
+  width: 66%;
+  height: 80%;
+  float: left;
+  margin-left: 4%;
+}
+.headerm text{
+  width: 100%;
+  height: 29%;
+  color: #c2c2c2;
+  font-size: 26rpx;
+}
+.headerr{
+  position:absolute;
+  top:13%;
+  left:75%;
+}
+.headerr image{
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+}
+.headerr text{
+  font-size:26rpx;
+  height:54rpx;
+  float:left;
+  line-height:42rpx;
+  text-indent:0.5em;
+}
+.maddle{
+  width: 92%;
+  height: 10%;
+  margin: 2% auto;
+  /* background: red; */
+}
+.maddle view{
+    color: #c2c2c2;
+    font-size: 30rpx;
+}
+.maddle text{
+  color: #c2c2c2;
+  font-size: 26rpx;
+  margin-top:1%;
+}

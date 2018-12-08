@@ -1,0 +1,142 @@
+<view class='body'>
+<!-- <button open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumber'>aa</button> -->
+  <view id='headetop'>
+    <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{banner}}" wx:key="{{item}}">
+        <swiper-item>
+          <video style='width:100%;' src='{{item.banner_video}}' poster="{{item.banner_url}}" controls="{{item.banner_url}}"></video>
+          <image src="{{item.banner_url}}" class="slide-image" width="355" height="200" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='headerbuttom'>
+    <view>
+      <image src='/img/xiangq.jpg'></image>
+      <text>纯在线AI量体</text>
+    </view>
+    <view class='homedinz'>
+      <image src='/img/xiangq.jpg'></image>
+      <text>一人一版永久保留</text>
+    </view>
+    <view>
+      <image src='/img/xiangq.jpg'></image>
+      <text>7个工作日完成定制</text>
+    </view>
+  </view>
+  <!-- <view class='maddle'> -->
+  <!-- '/pages/brand/ljgmx/ljgmx' -->
+  <!-- <navigator url='/pages/home/toorder/toorder'>
+    <view>
+      <image src='http://cdn.pengyoujuhui.com/bagin.png'></image>
+      <text>体型管理</text>
+    </view></navigator>
+    <navigator url='/pages/home/toorders/toorders'>
+    <view>
+      <image src='http://cdn.pengyoujuhui.com/heliw.png'></image>
+      <text>他的礼物</text>
+    </view></navigator>
+    <view>
+      <image src='http://cdn.pengyoujuhui.com/fenl.png'></image>
+      <text catchtap='click'>分类</text>
+    </view>
+  
+  </view> -->
+  <!-- <view class='maddlebuttom'>
+    <image src='http://cdn.pengyoujuhui.com/kslt.png'></image>
+    <text>开始量体</text>
+  </view> -->
+  <!-- <view class='homefgx'> Tailor Shop 新品首发推荐 </view> -->
+  <!-- <view class='footer'> -->
+  <!-- <view class='footer' data-id="{{item.product_id}}">
+    <block wx:for="{{productList}}" wx:key="item.product_id"> 
+      <navigator url='/pages/brand/details/details?product_id={{item.product_id}}&product_name={{item.product_name}}&product_price={{item.product_price}}&icon_url={{item.icon_url}}'>
+        <view class='shop1' >
+          <image class='shopa' src="{{item.icon_url}}"></image>
+          <image class='shopb' src='/img/new.png'></image>
+          <view> 
+            <text >{{item.product_name}}</text>
+            <text style='color:#3d2212;'>¥ {{item.product_price}}</text>
+          </view> 
+        </view>
+      </navigator>
+    </block>              
+  </view> -->
+  <!-- <view class="nav_two" hover-class="none" hover-stop-propagation="false">
+    <image src='/img/dingdan.png' style="position:relative; top:35rpx; left:28rpx;" class='new_img'></image>
+    <text class="new_s new_ding" style="position: relative; left:8rpx">我的订单</text>
+    <image src='/img/yue.png' style="position:relative; top:30rpx; left:90rpx;" class='new_img new_img_y'></image>
+    <text class="new_s" style="position: relative; left:70rpx">我的余额</text>
+    <image src='/img/tixing.png' style="position:relative; top:15px; left:145rpx;" class='new_img new_img_y'></image>
+    <text class="new_s" style="position: relative; left:123rpx">体型管理</text>
+  </view> -->
+  <view style='width:95%;height:90rpx;margin-left:2.5%;border-top:2px solid #e5e5e5;border-bottom: 2px solid #e5e5e5;margin-top: 30rpx;'>
+    <view style='width:33%;height:100%;display: inline-block;text-align:center;'>
+        <image src='/img/dingdan.png' style='float:left;width:35rpx;height:35rpx;margin-top:27.5rpx;margin-left:12%;'></image>
+        <navigator url='/pages/mine/myorder/myorder'><text style='float:left;font-size:30rpx;line-height:90rpx;margin-left:10rpx;'>我的订单</text></navigator>
+    </view>
+    <view style='width:34%;height:100%;display: inline-block;'>
+        <image src='/img/yue.png' style='float:left;width:35rpx;height:35rpx;margin-top:27.5rpx;margin-left:12%;'></image>
+         <navigator url='/pages/mine/balance/balance'><text style='float:left;font-size:30rpx;line-height:90rpx;margin-left:10rpx;'>我的余额</text></navigator>
+    </view>
+    <view style='width:33%;height:100%;display: inline-block;'>
+         <image src='/img/tixing.png' style='float:left;width:35rpx;height:35rpx;margin-top:27.5rpx;margin-left:12%;'></image>
+         <navigator url='/pages/mine/size/mysize/mysize'><text style='float:left;font-size:30rpx;line-height:90rpx;margin-left:10rpx;'>体型管理</text></navigator>
+    </view>
+  </view>
+  <!--  李武林编码  -->
+  <block wx:key="{{index}}" wx:for="{{categoryList}}">
+    <view class="guobin_view" hover-class="none" hover-stop-propagation="false">
+      <text class="guobin_text1">{{item.title}}</text>
+      <image src='/img/right2.png' class='guobin_img1'></image>
+      <text class='guobin_text2'>更多</text>
+      <image class='guobin_img2' src='http://dns.pengyoujuhui.com/pyjh/son/934b77f1-0d09-4fd2-8fb7-baaa3c4d8446'></image>
+    </view>
+
+    <scroll-view scroll-x class='scroll_view' style='white-space: nowrap; display: flex'>
+      <!-- 循环这个view就可以了 -->
+      <block wx:key="{{item.id}}" wx:for="{{item.productList}}">
+        <view class='scroll_view1' bindtap='productDetail' data-product_id='{{item.product_id}}' data-product_name='{{item.product_name}}' data-product_price='{{item.product_price}}' data-icon_url='{{item.icon_url}}'>
+          <image class='scroll_img1' src='{{item.icon_url}}'></image>
+          <view class='scroll_view2'>
+            <text class='scroll_text2'>{{item.product_name}}</text>
+          </view>
+          <view class='scroll_view3'>
+            <text class='scroll_text2'>标准领衬衫</text>
+          </view>
+          <view class='scroll_view3'>
+            <text class='scroll_text3'>￥{{item.product_price}}</text>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+
+    <view class='view_both'></view>
+  </block>
+  <view class='guobin_view'>
+    <text class="guobin_text1">{{competitive.title}}</text>
+    <!-- 修改图片的地方  钓鱼台国宾系列-->
+    <image class='jingpin_img1' src='/img/audo.png'></image>
+    <block wx:key="{{index}}" wx:for="{{competitive.productList}}">
+      <view class='jingpin2_view1' bindtap='productDetail' data-product_id='{{item.product_id}}' data-product_name='{{item.product_name}}' data-product_price='{{item.product_price}}' data-icon_url='{{item.icon_url}}'>
+        <image class='jingpin_img4' src='{{item.icon_url}}'></image>
+        <view class='jingpin_view4'>
+          <text class='jingpin_text1'>{{item.product_name}}</text>
+        </view>
+        <view class='jingpin_view5'>
+          <text class='jingpin_text2'>￥{{item.product_price}}</text>
+        </view>
+      </view>
+
+
+    </block>
+  </view>
+  <view class='div' style='display:{{asdasd}}'>
+    <image catchtap='clicka' src='/img/shanchu.png'></image>
+    <navigator url="/pages/login/login">
+      <image catchtap='lingquhongbao' id='asd' src='http://cdn.pengyoujuhui.com/dfydz/hongbao.png'></image>
+    </navigator>
+  </view>
+
+
+</view>

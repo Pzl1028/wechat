@@ -1,0 +1,16 @@
+@import'/pages/brand/ljgmx/ljgmx.wxss';
+/* @import'../../style/style.wxss'; */
+.aa{
+  width: 31%;
+  margin-left: 1.3%;
+}
+.ab{
+  display: none;
+}
+.ac{
+  width:100%;
+  float:left;
+  height:122px;
+  margin-left:3.5%;
+  margin-top:1%;
+}

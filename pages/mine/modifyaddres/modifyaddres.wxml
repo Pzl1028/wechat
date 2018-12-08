@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class='body'>
+  <view class='form-box'>
+    <form class='formSubmit'>
+      <view class='tianjdz'  wx:key='{{item.address_id}}'>
+        <label>姓名:</label>
+        <input id='{{item.address_id}}'  bindinput='consignee' value="{{consignee}}" name="consignee" placeholder="请输入收货人姓名"/>
+      </view>
+      <view class='tianjdz'>
+        <label>电话:</label> 
+        <input type="number" name="phone" value="{{phone}}" bindblur='phone' maxlength='11'  placeholder="请输入收货人手机号码"/>
+      </view>
+       <view class="tianjdz">
+       <label>省份城市:</label>
+       <input  placeholder="请输入省份城市"value='{{area}}' id='area' name="area" bindinput="area"></input>
+      </view>
+      <view class='tianjdz' >
+        <label>详细地址:</label>
+        <input  name="detail"  type="primary"  value="{{detail}}"  bindinput="detail" placeholder="请输入收货人详细地址"/>
+      </view>
+      <view class='tianjdzbb'>
+        <button id='btn' catchtap='submit' style='background-color:#392315;color:#fff;' form-type="submit">保存</button><button style='color:#000;background-color:#fff;'catchtap="sumit" >取消</button>
+      </view>
+    </form>
+  
+  </view>
+
+</view>

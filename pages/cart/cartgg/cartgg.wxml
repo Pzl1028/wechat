@@ -1,0 +1,11 @@
+ <view class='maddletop aa' wx:for='{{ljgmx}}' wx:key='{{item.sku_type_id}}'>
+        <view class='maddletopa ab'></view>
+        <view class='maddletopb ac'>
+          <view class='maddletopba'>
+            <image src='{{item.picture}}'></image>
+          </view>
+          <view class='maddletopbab'>{{item.sku_name}}</view>
+          <text>{{item.content}}</text>
+        </view>
+  </view>
+ 

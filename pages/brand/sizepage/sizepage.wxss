@@ -1,0 +1,83 @@
+@import'../../style/style.wxss';
+.header{
+  width: 100%;
+  height: 19%;
+  padding-top: 2%;
+  /* background-color: rgb(240, 252, 251); */
+}
+.headera{
+  width: 97%;
+  height: 30px;
+  margin-left: 3%;
+}
+.header view{
+  width: 95%;
+  height: 60rpx;
+  margin: 0 auto;
+}
+.header text{
+  width: 33%;
+  height: 100%;
+  line-height: 60rpx;
+  text-align:left;
+  float:left;
+  margin-left: 12%;
+}
+
+
+
+
+.headera text{
+  color: #cfb5a4;
+  float: left;
+  margin-top: 1%;
+}
+.headera label{
+  font-size: 14px;
+  float: left;
+  line-height: 30px;
+}
+.headera input{
+  width: 78%;
+  height: 30px;
+  float: left;
+  font-size:14px;
+  margin-left: 5.2%;
+  border: 1px solid #dadada;
+}
+
+.headerb{
+  width:45.6%;
+  height: 30px;
+  margin-left: 3%;
+  margin-top: 2%;
+  float: left;
+}
+.headerb text{
+  color: #cfb5a4;
+  float: left;
+  margin-top: 1%;
+}
+.headerb label{
+  font-size: 14px;
+  float: left;
+  line-height: 30px;
+}
+.headerb input{
+  max-width:60%;
+  height: 30px;
+  float: left;
+  font-size: 12px;
+  margin-left: 5%;
+  border: 1px solid #dadada;
+}
+
+.footer{
+  width: 100%;
+  height: 30px;
+  background: #392315;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+}

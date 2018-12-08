@@ -1,0 +1,146 @@
+@import '../../style/style.wxss';
+.body{
+  padding-top: 5%;
+}
+.header {
+  width: 100%;
+  height: 8.4%;
+  border-bottom: 4px solid #dadada;
+}
+.nav {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+.default {
+  line-height: 100rpx;
+  text-align: center;
+  flex: 1;
+  /* border-right: 1px solid gainsboro; */
+  color: #000;
+  font-weight: bold;
+  font-size: 28rpx;
+}
+.red {
+  line-height: 100rpx;
+  text-align: center;
+  color: #391315;
+  flex: 1;
+  border-bottom: 1px solid #391315;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.show {
+  display: block;
+  /* height:440rpx; */
+}
+.ALL{
+  display: block;
+  height:400rpx;
+  border-bottom: 1px solid #eee;
+}
+.hidden {
+  display: none;
+  /* text-align: center; */
+  line-height: 600px;
+}
+/* BRGIN ALL MYORDER */
+.maddletop{
+  width: 95%;
+  height: 46rpx;
+  /* background: gainsboro; */
+  margin: 0 auto;
+  padding-top:2%;
+  padding-bottom:2%;
+
+}
+.maddletop view{
+  font-size:28rpx;
+  float: left;
+  line-height: 60rpx;
+  color: #dadada;
+}
+.maddletop text{
+  width: 20%;
+  height: 100%;
+  float: right;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  text-align: right;
+}
+.maddlema{
+  width: 95%;
+  height: 234rpx;
+  /* border: 1px solid #dadada; */
+  margin: 0 auto;
+}
+.maddlemal{
+  width: 30%;
+  height:214rpx;
+  /* background: red; */
+  float: left;
+}
+.maddlemal image{
+  width: 100%;
+  height: 100%;
+}
+.maddlemar{
+  width: 63%;
+  height: 86%;
+  float: left;
+  /* background: yellowgreen; */
+  margin-left: 2%;
+}
+.maddlemar view{
+  width: 100%;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.maddlemar text{
+  font-size:24rpx;
+  float: left; 
+  line-height: 60rpx;
+}
+.maddlemar text:nth-child(2){
+  color: #dadada;
+  width: 60%;
+}
+.maddlemar text:nth-child(3){
+ font-size: 24rpx;
+}
+.maddlemar text:nth-child(4){
+  color: #dadada;
+  width: 60%;
+}
+.maddlebo{
+  width: 95%;
+  height: 60rpx;
+  margin: 0 auto;
+  margin-top: 6px;
+}
+.maddlebo view{
+  /* width: 42%; */
+  font-size:28rpx;
+  line-height:60rpx;
+  float:left;
+}
+.maddlebo text{
+  width:19%;
+  height:100%;
+  font-size:30rpx;
+  float:right;
+  text-align:center;
+  line-height:57rpx;
+  border: 1px solid #000;
+  margin-left: 5px;
+}
+.maddlebo text:nth-child(3){
+  border: 1px solid #000;
+  height:93%;
+  margin-left: 5px;
+}
+.maddlebo text:nth-child(2){
+  background: #000;
+  color: #fff;
+}

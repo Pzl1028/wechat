@@ -1,0 +1,77 @@
+<view>
+  <view class='heard' >
+    <!-- 机器测量 -->
+    <!-- <view class='jiqi'>
+      <text class='jiqi_text1' style='color:#A9A9A9;'>机器测量</text>
+    </view> -->
+    <!-- 竖条 -->
+    <view class='Verticalbar'></view>
+    <!-- 手动输入 -->
+    <view class='Artificialinput' bindtap='checkCustom' data-flag="1">
+      <text class='jiqi_text1' style='font-weight: 600;'>手动输入</text>
+    </view>
+  </view>
+  
+  <block wx:key="{{index}}" wx:for="{{mysize}}">
+  <!-- 体重信息部分 -->
+  <view class='intermediate'>
+    <view class='name'>
+      <text class='name_text1'>{{item.cus.name}}</text>
+      <view wx:if="{{item.cus.isDefault==1}}" class='name_view1' >默认</view>
+      <view wx:if="{{item.cus.isDefault==0}}" class='name_view3' >设为默认</view>
+      <text class='name_text2' data-size='{{item.cus}}' bindtap='updatamyseize'>编辑</text>
+      <view class='name_view2' style='margin-right:10rpx;'></view>
+      <text class='name_text2' data-size='{{item.cus}}' bindtap='delectmysize' style='margin-right:10rpx;'>删除</text>
+    </view>
+    <view class='intermediate_view3'>
+      <image class='intermediate_img1' src='/img/shopt.png'></image>
+    </view>
+    <view class='intermediate_view4'>
+      <view class='intermediate_view5' style=' margin-top: 20rpx;'>
+          <view class='intermediate_view6'>
+            <text class='intermediate_text1' style='margin-left:22rpx;'>姓名:{{item.cus.name}}</text>
+          </view>
+          <view class='intermediate_view6'>
+            <text class='intermediate_text1'>性别:{{item.cus.sex==0 ? '女' : '男'}}</text>
+          </view>
+          <view class='intermediate_view6'>
+               <text class='intermediate_text1'><text style='color:#FFA07A;'>*</text> 身高:{{item.cus.height}}cm</text>
+          </view>
+      </view>
+      <view class='intermediate_view5' >
+          <view class='intermediate_view6'>
+            <text class='intermediate_text1'><text style='color:#FFA07A;'>*</text>体重:{{item.cus.weight}}kg</text>
+          </view>
+          <view class='intermediate_view6'>
+            <text class='intermediate_text1'>肩宽:{{item.cus.breadth}}cm</text>
+          </view>
+          <view class='intermediate_view6'>
+               <text class='intermediate_text1' style='margin-left:24rpx;'> 臂长:{{item.cus.arm_length}}cm</text>
+          </view>
+      </view>
+
+      <view class='intermediate_view5' >
+          <view class='intermediate_view6'>
+            <text class='intermediate_text1'><text style='color:#FFA07A;'>*</text>领围:{{item.cus.s_neck_girth}}kg</text>
+          </view>
+          <view class='intermediate_view6'>
+            <text class='intermediate_text1'>胸围:{{item.cus.chest}}cm</text>
+          </view>
+          <view class='intermediate_view6'>
+               <text class='intermediate_text1' style='margin-left:24rpx;'> 腰围:{{item.cus.waist_circumference}}cm</text>
+          </view>
+      </view>
+      <view class='intermediate_view5' >
+          <view class='intermediate_view6'>
+            <text class='intermediate_text1' style='margin-left:24rpx;'>臀围:{{item.cus.hip_circumference}}cm</text>
+          </view>
+      </view>
+     
+    </view>
+    <view class='both'></view>
+  </view>
+</block>
+  
+
+  
+</view>

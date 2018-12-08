@@ -1,0 +1,113 @@
+<view class='body'>
+<!-- 头部设置 -->
+  <view class='header'>
+    <view id='headerl'>
+      <view class='wxtxd'>
+        <open-data type="userAvatarUrl" ></open-data>
+      </view>  
+    </view> 
+    <view class='headerma'>
+      <view class='wxmc'><open-data type="userNickName"  ></open-data></view> 
+      <text>{{mobile}}</text> 
+    </view>  
+    <view class='headerr'>
+      <view><text  catchtap='clicka'>登出</text><text>|</text><navigator hover-class='none' url='/pages/mine/information/information'><text>设置</text></navigator></view>
+      <text style='height: 50rpx;float: right; margin-top:5%;font-size:16px;'>可用余额：¥{{balance}}</text>
+    </view>
+  </view>
+  <!-- 我的订单 -->
+  <navigator url='/pages/mine/myorder/myorder'>
+  <view class='myorder'>
+      <view>我的订单</view>
+      <image src='/img/right2.png'></image>
+      <text>全部订单</text>   
+  </view></navigator>
+  <!-- 待付发收及售后 -->
+  <view class='fahuxl'>
+    <navigator url='/pages/mine/myorder/myorderfu/myorderfu'>
+    <view class='fahuxl1'>
+      <image src='http://cdn.pengyoujuhui.com/payment.png'></image>
+      <text>待付款</text>
+    </view></navigator>
+    <navigator url='/pages/mine/myorder/myorderfa/myorderfa'>
+    <view class='fahuxl1'>
+      <image src='http://cdn.pengyoujuhui.com/deliver.png'></image>
+      <text>待发货</text>
+    </view></navigator>
+    <navigator url='/pages/mine/myorder/myordershou/myordershou'>
+    <view class='fahuxl1' style='border-right:1px solid #e8e8e8;'>
+      <image src='http://cdn.pengyoujuhui.com/collect.png'></image>
+      <text>待收货</text>
+    </view></navigator>
+    <view class='fahuxl1' style='margin-left:2%;'>
+      <!-- <image src='http://cdn.pengyoujuhui.com/kservice.png'></image> -->
+      <!-- <button open-type='contact'>售后</button> -->
+      <button open-type='contact'  class='huihua'>
+        <image style='margin-top:-26%;' src='http://cdn.pengyoujuhui.com/kservice.png'></image>
+        <text>售后</text>
+      </button>
+      
+    </view>
+  </view>
+  <!-- 个人中心选项 -->
+  <view class='footer'>
+    <!-- 我的尺寸 -->
+    <view class='xuangxiangk'>
+      <navigator hover-class='none' url='/pages/mine/size/mysize/mysize'>
+        <text>我的尺寸</text>
+        <image class='tubiao' src='/img/right11.png'></image>
+        <!-- <text class='tubiao'>></text> -->
+      </navigator> 
+    </view>
+    <!-- 充值有礼 -->
+    <view class='xuangxiangk'>
+      <navigator hover-class='none' url='/pages/mine/recharge/recharge'>
+        <text>充值</text>
+        <image class='tubiao' src='/img/right11.png'></image>
+        <!-- <text class='tubiao'>></text> -->
+      </navigator>
+    </view>
+    <!-- 我的余额 -->
+    <view class='xuangxiangk'>
+      <navigator hover-class='none' url='/pages/mine/balance/balance'>
+        <text>我的余额</text>
+        <image class='tubiao' src='/img/right11.png'></image>
+        <!-- <text class='tubiao'>></text> -->
+      </navigator>
+    </view>
+    <!-- 我的地址 -->
+    <view class='xuangxiangk'>
+      <navigator hover-class='none' url='/pages/mine/addresss/addresss'>
+        <text>我的地址</text>
+        <image class='tubiao' src='/img/right11.png'></image>
+        <!-- <text class='tubiao'>></text> -->
+      </navigator>
+    </view>
+    <!--  -->
+    <view class='xuangxiangk'>
+      <navigator hover-class='none' url='/pages/mine/voucher/voucher'>
+        <text>我的优惠劵</text>
+        <image class='tubiao' src='/img/right11.png'></image>
+        <!-- <text class='tubiao'>></text> -->
+      </navigator>
+    </view>
+    <!--  -->
+    <view class='xuangxiangk'>
+      <navigator hover-class='none' url='/pages/mine/modify/modify'>
+        <text>修改支付密码</text>
+        <image class='tubiao' src='/img/right11.png'></image>
+        <!-- <text class='tubiao'>></text> -->
+      </navigator>
+    </view>
+    <!--  -->
+    <view class='xuangxiangk'>
+      <navigator hover-class='none' url='/pages/mine/setup/setup'>
+        <text>设置支付密码</text>
+        <image class='tubiao' src='/img/right11.png'></image>
+        <!-- <text class='tubiao'>></text> -->
+      </navigator>
+    </view>
+
+  </view>
+</view>
+

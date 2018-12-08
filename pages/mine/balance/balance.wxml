@@ -1,0 +1,21 @@
+<view class='body'>
+  <view class='header'>
+    <view>可用额度：</view>
+    <text>¥{{balance}}</text>
+  </view>
+  <navigator url='/pages/mine/balance/detailed/detailed'>
+  <view class='maddle' style='border-bottom:1px solid #dadada;'><view>充值消费明细</view><text>></text></view></navigator>
+  <navigator url='/pages/mine/modify/modify'>
+  <view class='maddle'><view>修改支付密码</view><text>></text></view></navigator>
+  <view class='footer'>
+    <view>钱包使用规则</view>
+    <text>1．请妥善保管好钱包支付密码，不要与登录密码一致。</text>
+    <text>2．充值金额只可用于东方云平台消费，不可提现、转赠。</text>
+    <text>3．使用钱包支付时，本金与赠金按比例同时扣减。</text>
+    <text>4．使用钱包支付时，与优惠活动不冲突。</text>
+    <text>5．最终解释权归东方云所有。</text>
+  </view>
+
+
+
+</view>

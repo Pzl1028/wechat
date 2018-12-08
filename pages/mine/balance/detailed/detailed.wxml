@@ -1,0 +1,24 @@
+<view class='body'>
+ <view class='maddle' wx:for="{{detailed}}" wx:key="{{item}}">
+    <view class='maddlel'>
+      <!-- <view> {{item.AcceptStation}}</view> -->
+      <text> 下单时间：{{item.create_time}}</text>
+      <text> 订单编号：{{item.order_code}}</text>
+    </view>
+    <view class='maddler'> 
+        <text>{{operation}}{{item.order_price}}</text>
+    </view>
+  </view>
+ <!-- <view class='maddle'>
+    <view class='maddlel'>
+      <view> 如果你爱上了别人请别告诉我 {{item.AcceptStation}}</view>
+      <text> 下单时间：我已没有当初爱上你时的勇敢{{item.AcceptTime}}</text>
+      <text> 订单编号：至少我的心可以幸福你的昨天{{item.AcceptTime}}</text>
+    </view>
+    <view class='maddler'>
+        <text>-1956{{operation}}{{item.amount}}</text>
+    </view>
+  </view> -->
+
+
+</view>

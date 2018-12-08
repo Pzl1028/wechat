@@ -1,0 +1,141 @@
+@import'../../style/style.wxss';
+.header{
+  width: 100%;
+  /* height:11%; */
+  padding-top:4%; 
+  float: left; 
+}
+.header text{
+  width: 100%;
+  font-size: 30rpx;
+  float: left;
+  text-align:center;
+
+}
+.header view{
+    width: 38%;
+    height: 26px;
+    border-radius:13px;
+    border: 1px solid #392315;
+    text-align: center;
+    margin: 4.5% auto;
+    margin-top: 8%;
+
+}
+.header>view text:nth-child(1){
+  /* width: 20%; */
+  font-size:1.2em;
+  line-height:42rpx;
+  text-align: center;
+}
+.header>view text:nth-child(2){
+  width:56%;
+  margin-left:12%;
+  line-height:19px;
+}
+.maddletop{
+  width:98%;
+  float: left;
+  margin-bottom:4%;
+  margin-left:2%;
+  border-top:1px solid #dadada;
+  padding-top: 1%;
+}
+.maddletopa{
+  width: 100%;
+  height: 19px;
+  font-size: 14px;
+  margin-left:-2%;
+  text-indent: 1.5em;
+  float: left;
+  border-left: 1px solid #efb600; 
+}
+.maddletopb{
+  width: 20%;
+  float: left;
+  margin-left:3.5%;
+  margin-top: 1%;
+}
+.maddletopb text{
+  font-size: 9px;
+}
+.active-tag{
+  background: #c8321e;
+   color:#fff;  
+   border:1rpx solid #000;
+}
+.maddletopba{
+  width: 100%;
+  height:80px;
+  /* background-color: red; */
+}
+.maddletopba image{
+  width: 100%;
+  height: 100%;
+}
+.maddletopbab{
+  width: 100%;
+  font-size: 12px;
+  /* text-align: left; */
+  margin: 6% 0;
+  text-align: center;
+}
+
+
+
+.slbh{
+  width:35%;
+  height: 100%;
+  float:left;
+  border:1px solid #dadada;
+  border-radius:7px;
+  margin-left:5%;
+  margin-top:1%;
+}
+.slbh text{
+  width:32%;
+  /* height:100%; */
+  float:left;
+  line-height:29px;
+  font-size:1em;
+  text-align:center;
+  margin-top: 3.5%;
+}
+.slbh text:nth-child(1){
+  border-right: 1px solid #dadada; 
+}
+.slbh text:nth-child(2){
+  border-right: 1px solid #dadada; 
+}
+.maddlebott{
+  float: left;
+  width: 750rpx;
+  height: 180rpx;
+}
+.footer{
+  width:100%;
+  background:#eee;
+  float:left;
+  margin-top:8%;
+  position: fixed;
+  bottom: 0;
+}
+.footer text{
+  background-color:#392315;
+  color:#fff;
+  text-align:center;
+  width:93%;
+  height:40px;
+  margin:0 auto;
+  float:left;
+  margin-left:3.5%;
+  margin-top:2.5%;
+  margin-bottom:2.5%;
+  line-height:40px;
+}
+
+.active-tag {
+   background: #c8321e;
+   color:#fff;  
+  border:1rpx solid #fff;
+ }
