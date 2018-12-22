@@ -42,8 +42,6 @@
           <view><image src='{{item.img_url}}'></image></view>
         </block>
       </view>  -->
-
-
       <!-- <view class='right'>
         <view><image src='/img/baranda.png'></image></view>
         <view><image src='/img/barandb.png'></image></view>
@@ -54,8 +52,4 @@
       </view> -->
     <!-- </view> -->
   </view>
-
-
-
 </view>
-

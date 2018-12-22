@@ -1,114 +1,137 @@
 <view>
-  <view class='heard'>
-    <text class='heard_text1'>点击添加收货地址</text>
-    <image class='heard_img1' src='/img/right11.png'></image>
+  <view class='heard' bindtap='adders'>
+    <text wx:if="{{hasAddress==true}}" class='heard_text1'>姓名:{{address.consignee}}</text>
+    <text class='heard_text3'>收货地址：{{address.area}}{{address.detail}}</text>
+    <text wx:if="{{hasAddress==true}}" class='heard_text2'>{{address.phone}}</text>
+    <!-- <text wx:if="{{hasAddress==true}}" class='heard_text1'>{{address.area}}{{address.detail}}</text> -->
+    <text wx:if="{{hasAddress==false}}" class='heard_text1'>点击添加收货地址</text>
+        <image class='heard_img1' src='/img/right11.png'></image>
   </view>
 
-  <view class='product'>
-     <view class='product_title'>
-        <text class='product_text1'>商品信息</text>
-     </view>
-     <view class='product_view1'>
-        <view class='product_view2'>
-             <image  src='/img/shopt.png'></image>
+  <view class='product' style="{{item.brede_context!='无留言' ? 'height:750rpx':'height:auto'}}" wx:for="{{selectProduct}}" wx:key="">
+    <view class='product_title'>
+      <text class='product_text1'>商品信息</text>
+    </view>
+    <view class='product_view1'>
+      <view class='product_view2'>
+        <image src='{{item.icon_url}}'></image>
+      </view>
+      <view class='product_view3'>
+        <!-- <view>
+          <text class='product_view3_text1'>{{item.product_name}}</text>
         </view>
-        <view class='product_view3'>
-            <view>
-              <text class='product_view3_text1'>Tailor shop西装定制拨款西服男套装男士西裤  一衣一裤</text>
-            </view>
-            <view>
-              <text class='product_view3_text2'>￥2999</text>
-              <text class='product_view3_text3'>x1</text>
-            </view>
+        <view>
+          <text class='product_view3_text2'>￥{{item.product_price}}</text>
+          <text class='product_view3_text3'>x{{item.product_amount}}</text>
+        </view> -->
+        <view class='product_view5'>{{item.product_name}}</view>
+        <view class='product_view6'>
+          <!-- <view wx:if="{{item.brede_context!='无留言'}}"  wx:for="{{item.sku}}"  wx:for-item="items" wx:key="items">
+            <text class='product_view6_text'>{{items.sku_name}}</text>
+          </view> -->
         </view>
-       <view class='product_title' style='border-bottom: 1rpx solid #dddddd;'>
-          <text class='product_text1' style='margin-left:0px;'>定制规格</text>
-       </view>
+        <view class='product_view7'>
+            <!-- <text wx:if="{{item.brede_context!='无留言'}}" style='float:left;font-size: 28rpx;line-height: 50rpx;color: #c0b7b7;margin-left: 5%;'>绣字内容：{{item.brede_context}}</text> -->
+        </view>
+        <view class='product_view7'>
+            <text style='float:left;font-size: 32rpx;line-height: 50rpx;margin-left: 5%;'>￥{{item.product_price}}</text>
+            <text style='float:right;font-size: 32rpx;line-height: 50rpx;margin-right: 5%;'>x{{item.product_amount}}</text>
 
-       <view class='product_view4' style='height:60rpx;margin-top:20rpx;'>
-          <view style='width:34%;height:100%;display:inline-block;'>
-              <text style='float:left; line-height:60rpx;font-size:26rpx;'>袖口：圆角单扣</text>
-          </view>
-          <view style='width:33%;height:100%;display:inline-block;'>
-              <text style='float:left; line-height:60rpx;font-size:26rpx;'>口袋：三角口袋</text>
-          </view>
-          <view style='float:right;width:33%;height:100%;display:inline-block;text-align:center;'>
-            <text style='line-height:60rpx;font-size:26rpx;'>领型：中八型</text>
-          </view>
-       </view>
-       
-        <view class='product_view4' style='height:60rpx;'>
-          <view style='width:34%;height:100%;display:inline-block;'>
-              <text style='float:left; line-height:60rpx;font-size:26rpx;'>门襟：贴门襟</text>
-          </view>
-          <view style='width:33%;height:100%;display:inline-block;'>
-              <text style='float:left; line-height:60rpx;font-size:26rpx;'>下摆：平摆</text>
-          </view>
-          <view style='float:right;width:33%;height:100%;display:inline-block;text-align:center;'>
-            <text style='line-height:60rpx;font-size:26rpx;'>版型：修身</text>
-          </view>
-       </view>
-        <view class='product_view4' style='height:60rpx;'>
-            <text style='float:left; line-height:60rpx;font-size:26rpx;margin-left:0rpx;'>绣字内容：东方云定制,定制您的精致生活</text>
-       </view>
+        </view>
+      </view>
 
-       <view class='product_view4' style='height:60rpx;'>
-          <text style='float:left; line-height:60rpx;font-size:26rpx;margin-left:0rpx;'>绣字位置：贴门襟</text> 
-          <text style='float:left; line-height:60rpx;font-size:26rpx;margin-left:0rpx;'>绣字颜色：黑色</text>   
-       </view>
-     </view>
+      <view wx:if="{{item.brede_context!='无留言'}}" class='product_title' style='border-bottom: 1rpx solid #dddddd;'>
+        <text class='product_text1' style='margin-left:0px;'>定制规格</text>
+      </view>
+
+      <view wx:if="{{item.brede_context!='无留言'}}" class='product_view4' style='height:60rpx;margin-top:20rpx;'>
+        <view style='width:34%;height:100%;display:inline-block;'>
+          <text style='float:left; line-height:60rpx;font-size:26rpx;'>袖口：{{item.sku[1].sku_name}}</text>
+        </view>
+        <view style='width:33%;height:100%;display:inline-block;'>
+          <text style='float:left; line-height:60rpx;font-size:26rpx;'>口袋：{{item.sku[2].sku_name}}</text>
+        </view>
+        <view style='float:right;width:33%;height:100%;display:inline-block;text-align:center;'>
+          <text style='line-height:60rpx;font-size:26rpx;'>领型：{{item.sku[3].sku_name}}</text>
+        </view>
+      </view>
+
+      <view wx:if="{{item.brede_context!='无留言'}}" class='product_view4' style='height:60rpx;'>
+        <view style='width:34%;height:100%;display:inline-block;'>
+          <text style='float:left; line-height:60rpx;font-size:26rpx;'>门襟：{{item.sku[4].sku_name}}</text>
+        </view>
+        <view style='width:33%;height:100%;display:inline-block;'>
+          <text style='float:left; line-height:60rpx;font-size:26rpx;'>下摆：平摆</text>
+        </view>
+        <view style='float:right;width:33%;height:100%;display:inline-block;text-align:center;'>
+          <text style='line-height:60rpx;font-size:26rpx;'>版型：{{item.sku["0"].sku_name}}</text>
+        </view>
+      </view>
+      <view wx:if="{{item.brede_context!='无留言'}}" class='product_view4' style='height:60rpx;'>
+        <text style='float:left; line-height:60rpx;font-size:26rpx;margin-left:0rpx;'>绣字内容：{{item.brede_context}}</text>
+      </view>
+
+      <view wx:if="{{item.brede_context!='无留言'}}" class='product_view4' style='height:60rpx;'>
+        <text style='float:left; line-height:60rpx;font-size:26rpx;margin-left:0rpx;'>绣字位置：{{item.sku[5].sku_name}}</text>
+        <text style='float:left; line-height:60rpx;font-size:26rpx;margin-left:25rpx;'>绣字颜色：{{item.sku[7].sku_name}}</text>
+      </view>
+    </view>
   </view>
 
-  <view class='mysize'>
+  <view wx:if="{{cus_status}}" class='mysize'>
     <view class='mysize_view1'>
-      <text class='mysize_text1' style='margin-left:0px;'>体型数据</text>
-      <view class='mysize_view2'>李武林</view>
+      <navigator hover-class='none' url='/pages/mine/size/mysize/mysize'>
+        <text class='mysize_text1' style='margin-left:0px;'>体型数据</text>
+        <view class='mysize_view2'>{{cus.name}}</view>
+      </navigator>
     </view>
 
     <view class='mysize_view3' style='margin-top:10rpx;'>
-        <view class='mysize_view4'>
-          <text class='mysize_text2'>身高：180cm</text>
-        </view>
-        <view class='mysize_view4'>
-          <text class='mysize_text2'>体重：70kg</text>
-        </view>
-        <view class='mysize_view4'>
-          <text class='mysize_text2'>肩宽：40cm</text>
-        </view>
-        <view class='mysize_view4'>
-          <text class='mysize_text2'>臂长：70cm</text>
-        </view>
+      <view class='mysize_view4'>
+        <text class='mysize_text2'>身高：{{cus.height}}cm</text>
+      </view>
+      <view class='mysize_view4'>
+        <text class='mysize_text2'>体重：{{cus.weight}}kg</text>
+      </view>
+      <view class='mysize_view4'>
+        <text class='mysize_text2'>肩宽：{{cus.breadth}}cm</text>
+      </view>
+      <view class='mysize_view4'>
+        <text class='mysize_text2'>臂长：{{cus.arm_length}}cm</text>
+      </view>
     </view>
     <view class='mysize_view3'>
-        <view class='mysize_view4'>
-          <text class='mysize_text2'>领围：40cm</text>
-        </view>
-        <view class='mysize_view4'>
-          <text class='mysize_text2'>胸围：40cm</text>
-        </view>
-        <view class='mysize_view4'>
-          <text class='mysize_text2'>腰围：70cm</text>
-        </view>
-        <view class='mysize_view4'>
-          <text class='mysize_text2'>臀围：40cm</text>
-        </view>
+      <view class='mysize_view4'>
+        <text class='mysize_text2'>领围：{{cus.s_neck_girth}}cm</text>
+      </view>
+      <view class='mysize_view4'>
+        <text class='mysize_text2'>胸围：{{cus.chest}}cm</text>
+      </view>
+      <view class='mysize_view4'>
+        <text class='mysize_text2'>腰围：{{cus.waist_circumference}}cm</text>
+      </view>
+      <view class='mysize_view4'>
+        <text class='mysize_text2'>臀围：{{cus.hip_circumference}}cm</text>
+      </view>
     </view>
   </view>
 
   <view class='liuyan'>
-      <text class='liuyan_text1'>买家留言：</text>
-      <input class='liuyan_input1' placeholder="输入您想嘱咐我的话  （40字内）"></input>
+    <text class='liuyan_text1'>买家留言：</text>
+    <input class='liuyan_input1' placeholder="输入您想嘱咐我的话  （40字内）"></input>
   </view>
-  <view class='coupon'>
-      <text class='liuyan_text1'>使用优惠券</text>
-      <image class='coupon_img1' src='/img/right11.png'></image>
-      <view class='coupon_view1'>一张可用</view>
+  <view class='coupon' bindtap='selectCoupons'>
+    <text class='liuyan_text1'>使用优惠券</text>
+    <image class='coupon_img1' src='/img/right11.png'></image>
+    <view class='coupon_view1' wx:if="{{num!=0&&coupon!=null}}">{{coupon.coupons_name}}</view>
+    <view class='coupon_view1' wx:if="{{num!=0&&coupon==null}}">{{num}}张可用</view>
+    <view class='coupon_view1' wx:if="{{num==0&&coupon==null}}">暂无可用优惠券</view>
   </view>
 
   <view class='zongji'>
     <view class='zongji_view1'>
       <text class='liuyan_text1' style='font-size:28rpx;line-height:80rpx;'>商品总计</text>
-      <text class='zongji_text1' style='line-height:80rpx;'>共1件 ￥2999</text>
+      <text class='zongji_text1' style='line-height:80rpx;'>共{{selectProduct.length}}件 ￥{{total_product}}</text>
     </view>
     <view class='zongji_view2'>
       <text class='liuyan_text1' style='font-size:28rpx;color:#aab4ca;line-height:50rpx;font-weight:400;'>订单运费</text>
@@ -116,28 +139,46 @@
     </view>
     <view class='zongji_view2'>
       <text class='liuyan_text1' style='font-size:28rpx;color:#aab4ca;line-height:50rpx;font-weight:400;'>优惠券</text>
-      <text class='zongji_text1' style='line-height:50rpx;color:#aab4ca;'>0</text>
+      <text wx:if="{{num!=0&&coupon!=null}}" class='zongji_text1' style='line-height:50rpx;color:#aab4ca;'>{{coupon.discount_amount}}</text>
+      <text wx:if="{{num!=0&&coupon==null}}" class='zongji_text1' style='line-height:50rpx;color:#aab4ca;'>0</text>
+      <text wx:if="{{num==0&&coupon==null}}" class='zongji_text1' style='line-height:50rpx;color:#aab4ca;'>0</text>
     </view>
   </view>
 
   <view class='select_pay'>
-      <radio-group>
-        <view class='select_pay_view1'>
-           <image src='/img/paymart.png' style='float:left;width:40rpx;height:40rpx;margin-left:3%;margin-top:30rpx;'></image>
-           <text style='float:left;margin-left:20rpx;line-height:100rpx;font-weight:500;font-size:32rpx;'>微信支付</text>
-           <radio checked='true' style='float:right;margin-right:3%;margin-top:20rpx;'></radio>
-        </view>
-        <view class='select_pay_view1'>
-           <image src='/img/yue.png' style='float:left;width:40rpx;height:40rpx;margin-left:3%;margin-top:30rpx;'></image>
-           <text style='float:left;margin-left:20rpx;line-height:100rpx;font-weight:500;font-size:32rpx;'>余额支付</text>
-           <text style='float:left;margin-left:20rpx;line-height:100rpx;font-weight:500;font-size:32rpx;color:#aab4ca;'>剩余：2000.00</text>
-           <radio style='float:right;margin-right:3%;margin-top:20rpx;'></radio>
-        </view>
-      </radio-group>
+    <radio-group bindchange="onPay">
+      <view class='select_pay_view1'>
+        <image src='/img/paymart.png' style='float:left;width:40rpx;height:40rpx;margin-left:3%;margin-top:30rpx;'></image>
+        <text style='float:left;margin-left:20rpx;line-height:100rpx;font-weight:500;font-size:32rpx;'>微信支付</text>
+        <radio checked='true' value="W" style='float:right;margin-right:3%;margin-top:20rpx;'></radio>
+      </view>
+      <view class='select_pay_view1'>
+        <image src='/img/yue.png' style='float:left;width:40rpx;height:40rpx;margin-left:3%;margin-top:30rpx;'></image>
+        <text style='float:left;margin-left:20rpx;line-height:100rpx;font-weight:500;font-size:32rpx;'>余额支付</text>
+        <text style='float:left;margin-left:20rpx;line-height:100rpx;font-weight:500;font-size:32rpx;color:#aab4ca;'>剩余：{{user_price}}元</text>
+        <radio value="B" style='float:right;margin-right:3%;margin-top:20rpx;'></radio>
+      </view>
+    </radio-group>
   </view>
 
   <view style='width:100%;height:100rpx;background-color:#fff; margin-top: 20rpx;'>
-    <text style='float:left;font-size:40rpx;font-weight:500;margin-left:3%;line-height:100rpx;'>合计：￥2999.00</text>
-    <view style='float:right;width:35%;background:#3d2113;height:100%;text-align:center;line-height:100rpx;color:#fff;font-size:40rpx;font-weight:500;'>提交订单</view>
+    <text style='float:left;font-size:40rpx;font-weight:500;margin-left:3%;line-height:100rpx;'>合计：￥{{price}}</text>
+    <view style='float:right;width:35%;background:#3d2113;height:100%;text-align:center;line-height:100rpx;color:#fff;font-size:40rpx;font-weight:500;' bindtap='createOrder'>提交订单</view>
   </view>
+
+
+
+
+  <view id='mengban' style='display:{{payView}}'>
+    <view class='nima'>
+      <image id='guanbi' bindtap='guanbi' src='/img/shanchu.png'></image>
+      <view>
+        <label>请输入支付密码</label>
+        <input type='password' maxlength='8' bindinput='passworda'></input>
+      </view>
+      <!-- <text class="qurey" bindtap='qurren'>确认</text> -->
+      <button class="qurey" bindtap='createOrder'>确认</button>
+    </view>
+  </view>
+
 </view>

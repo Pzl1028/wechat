@@ -13,25 +13,29 @@ Page({
   }, 
   // 使用红包点击事件
   click:function(e){
-    var that =this;
-    var ec_id = e.currentTarget.dataset.id;
-    var discount_amount = e.currentTarget.dataset.amount;
-    console.log(discount_amount)
-    console.log(ec_id)
-    var list =that.data.list
-    console.log(list)
-    var product_pricea = that.data.product_pricea
-    console.log(product_pricea)
-    if(list !==undefined){
-      wx.redirectTo({
-        url: '/pages/payorder/payorder?ec_id=' + ec_id + '&discount_amount=' + discount_amount
+    wx.setStorageSync('selectCoupon', e.currentTarget.dataset.coupon)
+    wx.navigateBack({
+      url:'/pages/payorder/payorder'
     })
-    }
-    if(product_pricea !==undefined){
-      wx.redirectTo({
-        url: '/pages/payorder/payorder?ec_id=' + ec_id + '&discount_amount=' + discount_amount
-      })
-    }
+    // var that =this;
+    // var ec_id = e.currentTarget.dataset.id;
+    // var discount_amount = e.currentTarget.dataset.amount;
+    // console.log(discount_amount)
+    // console.log(ec_id)
+    // var list =that.data.list
+    // console.log(list)
+    // var product_pricea = that.data.product_pricea
+    // console.log(product_pricea)
+    // if(list !==undefined){
+    //   wx.redirectTo({
+    //     url: '/pages/payorder/payorder?ec_id=' + ec_id + '&discount_amount=' + discount_amount
+    // })
+    // }
+    // if(product_pricea !==undefined){
+    //   wx.redirectTo({
+    //     url: '/pages/payorder/payorder?ec_id=' + ec_id + '&discount_amount=' + discount_amount
+    //   })
+    // }
   },
 
 
@@ -40,13 +44,13 @@ Page({
    */
   onLoad: function (options) {
     var that =this
-      var list = options.list
+    var list = wx.getStorageSync('couponList')
       console.log(list)
-    var product_pricea = options.product_pricea
-    console.log(product_pricea)
+    // var product_pricea = options.product_pricea
+    
     that.setData({
-      list: list,
-      product_pricea: product_pricea
+      list: list
+     
     })
 
   },

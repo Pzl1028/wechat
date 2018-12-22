@@ -50,7 +50,7 @@
           <view class='maddletob'> 
             <view >
             <image wx:if="{{item.id == abb}}" src='/img/xuanzhong.png' class='xuanzhong' style='width:40rpx;height:40rpx;'></image>
-            <image bindtap='click1' data-abb="{{item.id}}" style="{{item.id == abb?'border:1px solid #fbff07':''}}" src='{{item.icon_url}}'></image> </view>
+            <image bindtap='click1' data-abb="{{item.id}}" style="{{item.id == abb?'border:1px solid #f0ae00':''}}" src='{{item.icon_url}}'></image> </view>
             <text>{{item.value}}</text>
             <!-- <text>{{item.content}}</text> -->
           </view>

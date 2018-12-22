@@ -20,6 +20,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    wx.showLoading({
+      title: '加载中',
+    })
     var that = this
     var member_id = wx.getStorageSync('memberId');
     console.log(member_id)
@@ -27,6 +30,7 @@ Page({
       memberId: member_id,
       // memberId:1
     }, function(res) {
+      wx.hideLoading();
       console.log(res.data)
       // console.log(res.data.sku)
       if (res.data == "") { //若购物车没有值此页面显示空
@@ -47,6 +51,32 @@ Page({
     var that = this
     var member_id = wx.getStorageSync('memberId')
     var productid = o.target.id
+    // if (this.data.selectProduct.length > 0) {
+
+    //   var price = 0;
+    //   for (var i = 0; i < this.data.selectProduct.length; i++) {
+    //     if (o.target.id== this.data.selectProduct[i].shop_cart_id) {
+    //       console.log("当前已选择的商品加一")
+    //       price = this.data.selectProduct[i].product_price
+    //       this.data.selectProduct.splice(i, i);
+    //     }
+    //   }
+    //   // var totalPrice = this.data.;
+    //   var selectProduct_price = parseInt(parseInt(this.data.totalPrice).toFixed(0)) - parseInt(parseInt(price).toFixed(0))
+    //   this.setData({
+    //     totalPrice: 0,
+    //     isSelect:false
+    //   })
+    //   console.log(selectProduct_price)
+    // }
+
+    this.setData({
+      totalPrice: 0,
+      isSelect: false,
+      selectProduct:[],
+      selectAllStatus:false
+    })
+
     app.apiRequest('/shopCart/deleteMemberShopCart', 'POST', {
       shopCartId: productid
     }, function(res) {
@@ -87,32 +117,36 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function(options) {
-    console.info(options)
-    this.onLoad()
-  },
-  // onShow: function (options) {
+  // onShow: function(options) {
   //   console.info(options)
-  // var that = this
-  // var member_id = wx.getStorageSync('memberId');
-  // console.log(member_id)
-  // app.apiRequest('/shopCart/getMemberShopCart', 'GET', {
-  //   memberId: member_id,
-  // }, function (res) {
-  //   console.log(res.data)
-  //   if (res.data == "") { //若购物车没有值此页面显示空
-  //     that.setData({
-  //       hasList: false,
-  //     })
-  //   } else {
-  //     that.setData({
-  //       hasList: true,
-  //       carts: res.data
-  //     });
-  //     // this.getTotalPrice();
-  //   }
-  // })
+  //   this.onLoad()
   // },
+  onShow: function (options) {
+    console.info(options)
+  var that = this
+  var member_id = wx.getStorageSync('memberId');
+  console.log(member_id)
+  app.apiRequest('/shopCart/getMemberShopCart', 'GET', {
+    memberId: member_id,
+  }, function (res) {
+    console.log(res.data)
+    if (res.data == "") { //若购物车没有值此页面显示空
+      that.setData({
+        hasList: false,
+      })
+    } else {
+      that.setData({
+        hasList: true,
+        carts: res.data,
+        isSelect:false,
+        selectAllStatus:false,
+        totalPrice:0,
+        selectProduct:[]
+      });
+      // this.getTotalPrice();
+    }
+  })
+  },
 
   /**
    * 当前商品选中事件
@@ -136,10 +170,11 @@ Page({
     // this.getTotalPrice();
   },
   checkChange: function(e) {
-    // console.log(e)
+     console.log(e)
+    this.data.selectProduct = [];
     if (e.detail.value.length > 0) {
       var price = 0;
-      this.data.selectProduct = [];
+      
       for (var i = 0; i < e.detail.value.length; i++) {
         console.log(e.detail.value[i]);
         if (this.data.carts.length > 0) {
@@ -151,7 +186,6 @@ Page({
               price += (this.data.carts[j].product_price * this.data.carts[j].product_amount);
             }
           }
-
         }
       }
       console.log(price)
@@ -192,7 +226,7 @@ Page({
       this.setData({
         totalPrice: price.toFixed(2),
         selectAllStatus: true,
-        selectProduct:this.data.carts
+        selectProduct: this.data.carts
       })
     }
 
@@ -222,6 +256,7 @@ Page({
     var carts = this.data.carts;
     let num = this.data.carts[index].product_amount;
     num = num + 1;
+    console.log(num);
     carts[index].product_amount = num;
     this.setData({
       carts: carts
@@ -234,16 +269,15 @@ Page({
         if (e.currentTarget.dataset.product.shop_cart_id == this.data.selectProduct[i].shop_cart_id) {
           console.log("当前已选择的商品加一")
           price = this.data.selectProduct[i].product_price
+          this.data.selectProduct[i].product_amount = num
+          console.log(e.currentTarget.dataset.product.product_amount);
         }
       }
       // var totalPrice = this.data.;
-      var selectProduct_price = parseInt(parseInt(this.data.totalPrice).toFixed(0)) + parseInt(parseInt(price).toFixed(0))
       this.setData({
-        totalPrice: selectProduct_price.toFixed(2)
+        totalPrice: ((parseFloat(this.data.totalPrice) * 1000 + parseFloat(price) * 1000) / 1000).toFixed(2)
       })
-      console.log(selectProduct_price)
     }
-
   },
 
   /**
@@ -255,12 +289,13 @@ Page({
     console.log(e)
     var carts = this.data.carts;
     let num = this.data.carts[index].product_amount;
-    if(num>1){
+    if (num > 1) {
       num = num - 1;
       carts[index].product_amount = num;
       this.setData({
         carts: carts
       });
+      console.log(num)
       // this.getTotalPrice();
       if (this.data.selectProduct.length > 0) {
 
@@ -269,20 +304,17 @@ Page({
           if (e.currentTarget.dataset.product.shop_cart_id == this.data.selectProduct[i].shop_cart_id) {
             console.log("当前已选择的商品减一")
             price = this.data.selectProduct[i].product_price
+            this.data.selectProduct[i].product_amount = num
           }
         }
         // var totalPrice = this.data.;
-        var selectProduct_price = parseInt(parseInt(this.data.totalPrice).toFixed(0)) - parseInt(parseInt(price).toFixed(0))
         this.setData({
-          totalPrice: selectProduct_price.toFixed(2)
+          totalPrice: ((parseFloat(this.data.totalPrice) * 1000 - parseFloat(price) * 1000) / 1000) > 0 ? ((parseFloat(this.data.totalPrice) * 1000 - parseFloat(price) * 1000) / 1000).toFixed(2) : 0.01
         })
-        console.log(selectProduct_price)
       }
-    }else{
+    } else {
 
     }
-    
-
   },
 
   /**
@@ -306,18 +338,19 @@ Page({
     var selected_list = [];
     // 取出商品总价
     var total = this.data.totalPrice;
-    var list = this.data.carts;
-    for (var i = 0; i < list.length; i++) {
-      var selected = list[i].selected;
-      // console.log(selected)
-      if (selected === true) {
-        // var selected_list = list[i]
-        selected_list.push(list[i]);
-        console.log(selected_list)
-        // console.log(selected)
-      }
-    }
-    app.globalData.selected_list = selected_list;
+    // var list = this.data.carts;
+    // for (var i = 0; i < list.length; i++) {
+    //   var selected = list[i].selected;
+    //   // console.log(selected)
+    //   if (selected === true) {
+    //     // var selected_list = list[i]
+    //     selected_list.push(list[i]);
+    //     console.log(selected_list)
+    //     // console.log(selected)
+    //   }
+    // }
+    // app.globalData.selected_list = selected_list;
+
     console.log(total)
     if (total == 0) {
       wx.showModal({
@@ -325,8 +358,11 @@ Page({
         content: '',
       })
     } else {
+      wx.setStorageSync('selectProduct', this.data.selectProduct)
       wx.navigateTo({
-        url: '/pages/payorder/payorder?total=' + total
+
+        url: '/pages/payorder/payorder?total=' + total + '&memberId=' + wx.getStorageSync('memberId')
+
       })
     }
 
@@ -345,4 +381,6 @@ Page({
       path: ''
     }
   }
+
+  
 })

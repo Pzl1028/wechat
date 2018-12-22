@@ -56,22 +56,38 @@ Page({
     app.apiRequest('/address/addMemberAddress','POST',{
       'address': JSON.stringify(address)
     },function(res){
-      console.log(res.code)
+      console.log(res)
       if (res.code == 200) {
         wx.showToast({
           title: '添加地址成功',
           icon: 'none',
           duration: 2000
         });
-        wx.navigateBack({
-          delta: 1
-        })
+        
+        // wx.navigateBack({
+        //   url: '../../payorder/payorder',
+        // })
+        var isfalge = wx.getStorageSync('isfalge');
+        if(!isfalge){
+            console.log("确认订单进来的")
+            wx.navigateBack({
+              delta:1
+            })
+        }else{
+            wx.switchTab({
+              url: '../home/home',
+            })
+        }
       } else {
         wx.showToast({
           title: '添加地址失败',
           icon: 'none',
           duration: 2000
-        });
+          
+        })
+        // wx.navigateBack({
+        //   url: 'pages/payorder/payorder',
+        // });
       }
     })
   },

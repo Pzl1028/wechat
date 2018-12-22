@@ -99,8 +99,8 @@ button:hover{
 .footer{
   width: 100%;
   position: fixed;
-  bottom: 0px;
-  font-size: 14px;
+  bottom: 30rpx;
+  font-size: 28rpx;
   color: #9b9b9b;
   text-align: center;
 }
@@ -119,4 +119,48 @@ button:hover{
   width: 420rpx;
   height: 70rpx;
   margin: 0 auto;
+}
+
+.weixinauoth{
+  position: fixed;
+  width: 40%;
+  height: 200rpx;
+  margin-left: 30%;
+  text-align: center;
+  bottom: 100rpx;
+}
+
+.weixinauoth button{
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  background-color: transparent;
+}
+
+.weixinauoth image{
+  width: 182rpx;
+  height: 141rpx;
+  background-color: transparent;
+}
+
+.phone{
+  position: fixed;
+  width: 40%;
+  height: 200rpx;
+  margin-left: 30%;
+  text-align: center;
+  bottom: 100rpx;
+}
+
+.phone button{
+  width: 220rpx;
+  height: 220rpx;
+  text-align: center;
+  background-color: transparent;
+}
+
+.phone image{
+  width: 209rpx;
+  height: 137rpx;
+  background-color: transparent;
 }

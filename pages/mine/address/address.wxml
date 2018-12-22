@@ -19,7 +19,8 @@
         <input  name="detail"  type="primary"  bindinput="detail" placeholder="请输入收货人详细地址"/>
       </view>
       <view class='tianjdzbb'>
-        <button id='btn' catchtap='submit' style='background-color:#392315;color:#fff;' form-type="submit">保存</button><button style='color:#000;background-color:#fff;'>取消</button>
+        <button id='btn' catchtap='submit' style='background-color:#392315;color:#fff;' form-type="submit">保存</button>
+        <button style='color:#000;background-color:#F4F4F4;'>取消</button>
       </view>
     </form>
   

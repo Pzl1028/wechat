@@ -1,0 +1,51 @@
+<view class='header'>{{title}}{{name}}</view>
+ <view class='right'>
+  <block wx:key="{{item}}" wx:for="{{productList}}">
+    <navigator hover-class='none' url='/pages/brand/details/details?product_id={{item.product_id}}&product_name={{item.product_name}}&product_price={{item.product_price}}'>
+      <view>
+        <image  id='{{item.product_id}}' src='{{item.icon_url}}'></image>
+        <view id='asd'> 
+          <text >{{item.product_name}}</text>
+          <!-- <image src='/img/detailscart.png'></image> -->
+          <text style='color:#3d2212;'>¥ {{item.product_price}}</text>
+          <navigator ver-class='none' url='/pages/brand/jrgwcx/jrgwcx?id={{item.product_id}}'>
+          <image src='/img/detailscart.png'></image>
+          </navigator>
+        </view>
+      </view>       
+    </navigator>
+  </block>
+</view> 
+<!-- <view></view>
+ <view class='right'>
+  <block wx:key="{{item}}" wx:for="{{productList}}">
+    <navigator ver-class='none' url='/pages/brand/brand/brand?product_id={{item.product_id}}&product_name={{item.product_name}}&product_price={{item.product_price}}'>
+      <view>
+        <image  id='{{item.product_id}}' src='{{item.icon_url}}'></image>
+        <view id='asd'> 
+            <text >{{item.product_name}}</text>
+            <text style='color:#3d2212;'>¥ {{item.product_price}}</text>
+            <navigator ver-class='none' url='/pages/brand/jrgwcx/jrgwcx?id={{item.product_id}}'>
+              <image src='/img/detailscart.png'></image>
+            </navigator>
+        </view>
+      </view> 
+    </navigator>
+  </block>
+</view>  -->
+ <!-- <view class='right'>
+  <block wx:key="{{item}}" wx:for="{{productList}}">
+    <navigator ver-class='none' url='/pages/brand/brand/brand?product_id={{item.product_id}}&product_name={{item.product_name}}&product_price={{item.product_price}}'>
+      <view>
+        <image  id='{{item.type_id}}' src='{{item.icon_url}}'></image>
+        <view id='asd'> 
+            <text >{{item.product_name}}</text>
+            <text style='color:#3d2212;'>¥ {{item.product_price}}</text>
+            <navigator ver-class='none' url='/pages/brand/jrgwcx/jrgwcx?id={{item.product_id}}'>
+              <image src='/img/detailscart.png'></image>
+            </navigator>
+        </view>
+      </view>
+    </navigator>
+  </block>
+</view>  -->

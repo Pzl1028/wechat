@@ -3,7 +3,7 @@
 var scence =0;
 App({
   $_SERVER: {
-    //TEST: 'http://localhost:9951/',
+    TEST: 'http://localhost:9951',
     //TEST: 'http://192.168.1.22:9951/',
     // TEST: 'http://192.168.1.46:9951/',
     API: 'https://www.pengyoujuhui.com/clothing'
@@ -95,7 +95,6 @@ App({
           //   success: res => {
           //     // 可以将 res 发送给后台解码出 unionId
           //     this.globalData.userInfo = res.userInfo
-
           //     // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
           //     // 所以此处加入 callback 以防止这种情况
           //     if (this.userInfoReadyCallback) {
@@ -128,7 +127,8 @@ App({
 
   globalData: {
     userInfo: null,
-    member_id:null
+    member_id:null,
+    selectProduct:null
   },
   /**
  * 用户点击右上角分享

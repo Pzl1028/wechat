@@ -1,23 +1,42 @@
 /* pages/payorder/payorder.wxss */
 
-page{
+page {
   background-color: #f4f4f4;
 }
 
-.heard{
+.heard {
+  position: relative;
   width: 100%;
   height: 130rpx;
   background-color: #cab3a3;
 }
 
-.heard_text1{
+.heard_text1 {
+  position: absolute;
   font-size: 30rpx;
   font-weight: 500;
-  line-height: 130rpx;
+  line-height: 90rpx;
   margin-left: 3%;
 }
 
-.heard_img1{
+.heard_text2 {
+  position: absolute;
+  font-size: 30rpx;
+  font-weight: 500;
+  line-height: 90rpx;
+  right: 70rpx;
+}
+
+.heard_text3 {
+  position: absolute;
+  font-size: 30rpx;
+  font-weight: 400;
+  line-height: 130rpx;
+  margin-top: 28rpx;
+  left: 3%;
+}
+
+.heard_img1 {
   float: right;
   width: 30rpx;
   height: 30rpx;
@@ -25,106 +44,104 @@ page{
   margin-top: 50rpx;
 }
 
-.product{
-  width:100%;
-  height: 750rpx;
-  background-color:#ffffff;
+.product {
+  width: 100%;
+  background-color: #fff;
   margin-top: 20rpx;
 }
 
-.product_title{
+.product_title {
   width: 100%;
   height: 100rpx;
 }
 
-.product_title text{
+.product_title text {
   font-size: 30rpx;
   font-weight: 500;
   line-height: 100rpx;
   margin-left: 3%;
 }
 
-.product_view1{
+.product_view1 {
   width: 94%;
   height: 250rpx;
   margin-left: 3%;
+  padding-bottom: 30rpx;
 }
 
-.product_view2{
+.product_view2 {
   width: 35%;
   height: 100%;
   display: inline-block;
 }
 
-
-.product_view3{
+.product_view3 {
+  position: relative;
   width: 65%;
   height: 100%;
   display: inline-block;
 }
-.product_view4{
+
+.product_view4 {
   width: 100%;
   height: 100rpx;
 }
 
-.product_view2 image{
+.product_view2 image {
   width: 250rpx;
   height: 100%;
 }
 
-.product_view3 view{
+/* .product_view3 view {
   float: left;
   width: 100%;
   height: 125rpx;
-
 }
 
-.product_view3_text1{
+.product_view3_text1 {
   float: left;
   font-size: 30rpx;
   margin-left: 20rpx;
   margin-top: 40rpx;
 }
 
-.product_view3_text2{
+.product_view3_text2 {
   float: left;
   font-size: 30rpx;
   margin-left: 20rpx;
   line-height: 125rpx;
 }
 
-.product_view3_text3{
+.product_view3_text3 {
   float: right;
   font-size: 30rpx;
   margin-right: 20rpx;
   line-height: 125rpx;
-}
+} */
 
-
-.mysize{
+.mysize {
   width: 100%;
   /* height: auto; */
   height: 270rpx;
-  background-color: #ffffff;
+  background-color: #fff;
   margin-top: 20rpx;
 }
 
-.mysize_view1{
+.mysize_view1 {
   width: 94%;
   height: 100rpx;
   margin-left: 3%;
-  border-bottom: 0.5px solid #dddddd;
+  border-bottom: 0.5px solid #ddd;
 }
 
-.mysize_text1{
-  font-size:30rpx;
-  font-weight:500;
-  line-height:100rpx;
-
+.mysize_text1 {
+  font-size: 30rpx;
+  font-weight: 500;
+  line-height: 100rpx;
 }
 
-.mysize_view2{
-  font-size:24rpx;
+.mysize_view2 {
+  font-size: 24rpx;
   display: inline-block;
   margin-left: 30rpx;
   border: solid;
@@ -135,32 +152,32 @@ page{
   font-weight: 500;
 }
 
-.mysize_view3{
+.mysize_view3 {
   width: 94%;
   height: 70rpx;
   margin-left: 3%;
 }
 
-.mysize_view4{
+.mysize_view4 {
   width: 25%;
   height: 100%;
   display: inline-block;
 }
 
-.mysize_text2{
+.mysize_text2 {
   float: left;
   font-size: 24rpx;
   line-height: 70rpx;
 }
 
-.liuyan{
+.liuyan {
   width: 100%;
   height: 100rpx;
-  background-color: #ffffff;
+  background-color: #fff;
   margin-top: 20rpx;
 }
 
-.liuyan_text1{
+.liuyan_text1 {
   float: left;
   font-size: 30rpx;
   line-height: 100rpx;
@@ -168,26 +185,27 @@ page{
   margin-left: 3%;
 }
 
-.liuyan_input1{
+.liuyan_input1 {
   float: left;
   width: 75%;
   height: 100rpx;
   color: #aab4ca;
   font-size: 27rpx;
   line-height: 100rpx;
+  z-index: 1;
 }
 
-.coupon{
+.coupon {
   width: 100%;
   height: 100rpx;
-  background-color: #ffffff;
+  background-color: #fff;
   margin-top: 20rpx;
-  border-bottom: 0.5px solid #dddddd;
+  border-bottom: 0.5px solid #ddd;
 }
 
-.coupon_view1{
+.coupon_view1 {
   float: right;
-  font-size:24rpx;
+  font-size: 24rpx;
   margin-right: 10rpx;
   border: solid;
   border-width: 3rpx;
@@ -197,7 +215,7 @@ page{
   margin-top: 30rpx;
 }
 
-.coupon_img1{
+.coupon_img1 {
   float: right;
   width: 40rpx;
   height: 40rpx;
@@ -205,65 +223,175 @@ page{
   margin-right: 3%;
 }
 
-.zongji{
+.zongji {
   width: 100%;
   height: 200rpx;
-  background-color: #ffffff;
-  }
+  background-color: #fff;
+}
 
-  .zongji_text1{
-    float: right;
-    font-size: 28rpx;
-    line-height: 100rpx;
-    margin-right: 3%;
-  }
+.zongji_text1 {
+  float: right;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  margin-right: 3%;
+}
 
-  .zongji_view1{
-    width: 100%;
-    height: 80rpx;
-  }
-
-  .zongji_view2{
-    width: 100%;
-    height: 50rpx;
-  }
-
-  .select_pay{
-    width: 100%;
-    height: 200rpx;
-    background-color: #fff;
-    margin-top: 20rpx;
-  }
-
-  .select_pay_view1{
-      width: 100%;
-      height: 100rpx;
-      
-  }
-  .headerma{
+.zongji_view1 {
   width: 100%;
-  height:40%;
+  height: 80rpx;
+}
+
+.zongji_view2 {
+  width: 100%;
+  height: 50rpx;
+}
+
+.select_pay {
+  width: 100%;
+  height: 200rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.select_pay_view1 {
+  width: 100%;
+  height: 100rpx;
+}
+
+.headerma {
+  width: 100%;
+  height: 40%;
   margin-top: 2%;
   float: left;
 }
-.headerma label{
+
+.headerma label {
   float: left;
   font-size: 15px;
   margin-top: 5%;
 }
-.headerma text{
+
+.headerma text {
   float: left;
   font-size: 16px;
   margin-top: 5%;
 }
-.headerClick{
-  position:absolute;
-  top:2%;
-  right:2%;
-}
-.headerClick image{
-  width:30rpx;
-  height:40rpx;
+
+.headerClick {
   position: absolute;
-  right:5rpx;
+  top: 2%;
+  right: 2%;
+}
+
+.headerClick image {
+  width: 30rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 5rpx;
+}
+
+#mengban {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0px;
+  z-index: 99;
+}
+
+.nima {
+  position: fixed;
+  z-index: 999;
+  top: 23%;
+  width: 90%;
+  height: 34%;
+  background: #fff;
+  border-top: 1px solid #eee;
+  left: 5%;
+  border-radius: 16px;
+}
+
+.nima view {
+  width: 100%;
+  margin: 15% auto;
+}
+
+.nima>view>label {
+  float: left;
+  width: 100%;
+  font-size: 1em;
+  text-align: center;
+  padding-bottom: 30rpx;
+}
+
+.nima>view>input {
+  width: 61%;
+  border-bottom: 1px solid #dadada;
+  margin: 0 auto;
+  padding-top: 6rpx;
+  text-align: center;
+}
+
+.nima text {
+  width: 34%;
+  margin: 0 auto;
+  background: #391315;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: -60rpx;
+  border-radius: 26px;
+}
+
+#guanbi {
+  float: right;
+  margin-right: 60rpx;
+  margin-top: 20rpx;
+  height: 30rpx;
+  width: 30rpx;
+}
+
+.qurey {
+  width: 50%;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #392315;
+  color: #fff;
+  margin-left: 25%;
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: -30rpx;
+}
+
+.product_view5{
+  float: left;
+  width: 95%;
+  margin-left: 5%;
+  height: 50rpx;
+  overflow: hidden;
+  font-size: 32rpx;
+  line-height: 50rpx;
+}
+
+.product_view6{
+  float: left;
+  width: 100%;
+  height: 100rpx;
+  overflow: hidden;
+}
+
+.product_view6_text{
+  float: left;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  color: #c0b7b7;
+  margin-left: 5%;
+
+}
+
+.product_view7{
+  float: left;
+  width: 100%;
+  height: 50rpx;
+  overflow: hidden;
 }

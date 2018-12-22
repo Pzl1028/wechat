@@ -18,7 +18,6 @@ Page({
     abc: "none",
     // selected: true,
     // selected1: false,
-    view:"",
   },
   //男装点击
   click: function (e) {
@@ -193,6 +192,7 @@ Page({
     app.apiRequest('/custom/getCoutomTypes', 'GET', {
       'sex': 2
     }, function (res) {
+      console.log("这种")
       console.log(res.data)
       // var asa = res.data[0].key.val.length
       // var asb = res.data[1].key.val.length
@@ -212,18 +212,19 @@ Page({
       that.setData({ ljgmx1: res.data[1] });
       that.setData({ ljgmx2: res.data[2] });
       that.setData({ ljgmx3: res.data[3] });
-      // that.setData({ ljgmx4: res.data[4] });
-      // that.setData({ ljgmx5: res.data[5] });
-      // that.setData({
-      //   ljgmx6: res.data[6]
-      // })
       that.setData({
         aba: res.data["0"].val["0"].id,
         abb: res.data[1].val["0"].id,
         abc: res.data[2].val["0"].id,
         abd: res.data[3].val["0"].id
       })
+      // that.setData({ ljgmx4: res.data[4] });
+      // that.setData({ ljgmx5: res.data[5] });
+      // that.setData({
+      //   ljgmx6: res.data[6]
+      // })
     });
+   
     //女
     // app.apiRequest('/custom/getCoutomTypes', 'GET', {
     // 'sex':1
@@ -257,13 +258,14 @@ Page({
       'memberId': member_id,
       'state': 1
     }, function (res) {
+      var mysize = wx.getStorageSync('updataMySize')
       console.log("ssssss")
       console.log(res)
-     // console.log(res.data.cus[0].sex)
+     // console.log(mysize.sex)
       if(res.data=="false"){
         return;
       }
-      var asd = res.data.cus[0].sex
+      var asd = mysize.sex
       if (asd == 1) {
         var asdasd = "男"
       }
@@ -271,40 +273,36 @@ Page({
         var asdasd = "女"
       }
       that.setData({
-        // sex: asdasd,
-        // nick_name: res.data.cus[0].name,
-        // height: res.data.cus[0].height,
-        // weight: res.data.cus[0].weight,
-        // breadthing: res.data.cus[0].s_neck_girth, //领围
-        // long_legs: res.data.cus[0].breadth, //机器扫描肩宽
-        // arm_length: res.data.cus[0].arm_length, //臂长
-        // hip_circumference: res.data.cus[0].chest, //胸围
-        // waist_circumference: res.data.cus[0].waist_circumference, //腰围
-        // knee_circumference: res.data.cus[0].hip_circumference, //臀围
-        // // long_legs: res.data.cus[0].long_legs, //肩宽
-        
-        // //  这里报错   下面4行被我注释掉
-        // // s_buttock_height: res.data.cus[0].s_buttock_height, //臀高
-        // // s_cross: res.data.cus[0].s_cross,  //过肩横颈
-        // // s_cross_height: res.data.cus[0].s_cross_height, //颈椎点高
-        // // s_neck_girth: res.data.cus[0].s_neck_height,//颈围
-        
-        
-        // // s_waist_height: res.data.cus[0].s_waist_height,  //腰高
-
-        // namea: res.data.cus[0].name,
-        // nameb: res.data.cus[0].height,
-        // namec: res.data.cus[0].weight,
-        // named: res.data.cus[0].s_neck_girth,
-        // namee: res.data.cus[0].arm_length,
-        // namef: res.data.cus[0].chest,
-        // nameg: res.data.cus[0].waist_circumference,
-        // nameh: res.data.cus[0].hip_circumference,
-        // namei: res.data.cus[0].breadth,
-        // namej: asdasd
+        sex: asdasd,
+        id:mysize.id,//customid
+        nick_name: mysize.name,
+        height: mysize.height,
+        weight: mysize.weight,
+        breadthing: mysize.s_neck_girth, //领围
+        long_legs: mysize.breadth, //机器扫描肩宽
+        arm_length: mysize.arm_length, //臂长
+        hip_circumference: mysize.chest, //胸围
+        waist_circumference: mysize.waist_circumference, //腰围
+        knee_circumference: mysize.hip_circumference, //臀围
+        // long_legs: mysize.long_legs, //肩宽
+        //  这里报错   下面4行被我注释掉
+        // s_buttock_height: mysize.s_buttock_height, //臀高
+        // s_cross: mysize.s_cross,  //过肩横颈
+        // s_cross_height: mysize.s_cross_height, //颈椎点高
+        // s_neck_girth: mysize.s_neck_height,//颈围
+        // s_waist_height: mysize.s_waist_height,  //腰高
+        namea: mysize.name,
+        nameb: mysize.height,
+        namec: mysize.weight, 
+        named: mysize.s_neck_girth,
+        namee: mysize.arm_length,
+        namef: mysize.chest,
+        nameg: mysize.waist_circumference,
+        nameh: mysize.hip_circumference,
+        namei: mysize.breadth,
+        namej: asdasd
       })
     });
-
   },
   submit: function (e) {
 
@@ -339,7 +337,9 @@ Page({
     console.log(skuu)
 
     //点击信息提取结束
+
     var ids = that.data.id
+    console.log("ids")
     console.log(ids)
     // 手动输入信息提取
     var namea = that.data.namea //
@@ -350,9 +350,9 @@ Page({
     console.log(weight)
     var a = that.data.namej // 性别
     if (a == "男") {
-      var sex = "1"
+      var sex = 1
     } else {
-      var sex = "2"
+      var sex = 2
     }
     // console.log(namec)
     var breadth = that.data.named // 颈围
@@ -379,104 +379,9 @@ Page({
     //   'long_legs': long_legs
     // }
     // console.log(memCustom)
-    if (namea==""){
-      wx.showToast({
-        title: '名字不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return;
-    }
-
-    if (sex == "") {
-      wx.showToast({
-        title: '性别不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return;
-    }
-
-    if (height == "") {
-      wx.showToast({
-        title: '身高不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return;
-    }
-
-    if (weight == "") {
-      wx.showToast({
-        title: '体重不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return;
-    }
-
-    if (long_legs == "") {
-      wx.showToast({
-        title: '肩宽不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return;
-    }
-
-    if (arm_length == "") {
-      wx.showToast({
-        title: '臂长不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return;
-    }
-
-
-    if (breadth == "") {
-      wx.showToast({
-        title: '颈围不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return;
-    }
-
-
-    if (chest == "") {
-      wx.showToast({
-        title: '胸围不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return;
-    }
-
-    if (waist_circumference == "") {
-      wx.showToast({
-        title: '腰围不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return;
-    }
-
-    if (hip_circumference == "") {
-      wx.showToast({
-        title: '臀围不能为空',
-        icon: 'none',
-        duration: 2000
-      })
-      return;
-    }
-
-    
-
-
     var member_id = wx.getStorageSync('memberId');  //用户id
-    app.apiRequest('/custom/addMemberCustom', 'POST', {
-      'memberId': member_id,
+    app.apiRequest('/custom/updateMemberCustom', 'POST', {
+      'ids':ids,
       'name': namea,
       'height': height,
       'weight': weight,
@@ -492,32 +397,22 @@ Page({
     }, function (res) {
       console.log(res.code)
       if (res.code == 200) {
-        
+        setTimeout(function () {
         wx.showToast({
-          title: '录入量体成功',
-          icon: 'none',
+          title: '修改成功',
+          icon: 'succes',
           duration: 2000
         })
-        timer: setTimeout(function () {
-          wx.navigateBack({
-            delta: 1
-          })  
-        }, 1500);
-       
+        },1000)
         
-        // if(that.data.view!=""){
-        //   wx.redirectTo({
-        //     url: that.data.view,
-        //   })
-        // }else{
-        // wx.redirectTo({
-        //   url: '/pages/mine/size/mysize/mysize',
-        //   })
-        // }
+        wx.setStorageSync('selectCustom', '')
+        wx.redirectTo({
+          url: '/pages/mine/size/mysize/mysize',
+        })
       } else {
         setTimeout(function () {
         wx.showToast({
-          title: '录入量体失败',
+          title: '修改失败',
           icon: 'loading',
           duration: 500
         })

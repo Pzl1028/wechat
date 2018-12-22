@@ -1,7 +1,7 @@
 <view class='body'>
   <view class='header'>
     <view class="nav bc_white">
-	    <view class="{{selected?'red':'default'}}" bindtap="selected">所有</view>
+	    <view class="{{selected?'red':'default'}}" bindtap="selected">全部</view>
     	<view class="{{selected1?'red':'default'}}" bindtap="selected1">待付款</view>
       <view class="{{selected2?'red':'default'}}" bindtap="selected2">待发货</view>
       <view class="{{selected3?'red':'default'}}" bindtap="selected3">待收货</view>
@@ -13,7 +13,8 @@
      <view class='ALL' wx:key="{{item}}" wx:for="{{myallorder}}">
         <!-- <block wx:key="{{item}}" wx:for="{{myallorder}}"> -->
           <view class='maddletop'>
-            <view >订单编号：{{item.order_code}} </view><text>{{status}}</text>
+            <view >订单编号：{{item.order_code}} </view>
+            <!-- <text>{{status}}</text> -->
           </view> 
           <view class='maddlema'>
             <view class='maddlemal'><image src='{{item.product_icon}}'></image></view>

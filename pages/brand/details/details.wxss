@@ -201,7 +201,7 @@ swiper image{
   padding-top: 10rpx;
 }
 .huihua{
-  width: 153rpx;
+  width: 120rpx;
   text-align: center;
   background: #fff; 
 }
@@ -440,4 +440,65 @@ swiper image{
   text-align: center;
   padding-top: 20rpx;
   font-size: 1em;
+}
+
+.selectcarts{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  background-color: #444235;
+  opacity:0.95;
+  
+}
+
+.select_product{
+  position: fixed;
+  width: 100%;
+  height: 400rpx;
+  background-color: #ffffff;
+  bottom: 0rpx;
+}
+
+.select_product2{
+  width: 100%;
+  height: 120rpx;
+}
+
+.product_text1{
+  float: left;
+  line-height: 120rpx;
+  font-size: 32rpx;
+  margin-left: 30rpx;
+}
+
+.product_num{
+  float: left;
+  width: 70rpx;
+  height: 60rpx;
+  background-color: #dadada;
+  margin-top: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.product_num2{
+  float: left;
+  width: 70rpx;
+  height: 57rpx;
+  background-color: #fff;
+  margin-top: 30rpx;
+  text-align: center;
+  line-height: 57rpx;
+  border: solid;
+  border-width: 3rpx;
+  border-color: #dadada;
+}
+
+.select_product3{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 90rpx;
+  
 }

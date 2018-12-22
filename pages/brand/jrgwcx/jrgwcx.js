@@ -15,6 +15,7 @@ Page({
     ljgmx6: "",
     ljgmx7: "",
     ljgmx8: "",
+    ljgmx9: "",
     a: [],
     product_id:"",
     val: {},
@@ -22,7 +23,7 @@ Page({
     key: "",
     status: 0,
     ace: "",
-    tipsshow: {}, tipsshow1: "", tipsshow2: "", tipsshow3: "", tipsshow4: "", tipsshow5: "", tipsshow6: "", tipsshow7: "",
+    tipsshow: {}, tipsshow1: "", tipsshow2: "", tipsshow3: "", tipsshow4: "", tipsshow5: "", tipsshow6: "", tipsshow7: "", tipsshow8: "", tipsshow9: "",
     id:"",
     abb:"",
     abc:"",
@@ -30,8 +31,9 @@ Page({
     abe:"",
     abf:"",
     abg:"",
-    abh:""
-
+    abh:"",
+    asi:"",
+    brede_context:""
   },
   // Commodity addition and reduction
   minusCount() {
@@ -107,6 +109,20 @@ Page({
       abh: ids7,
     })
   },
+  click9: function (o) {
+    var ids9 = o.target.dataset.asi;
+    console.log(ids9)
+    this.setData({
+      asi: ids9,
+    })
+  },
+
+  brede_context_input:function(res){
+    console.log(res.detail.value)
+    this.setData({
+      brede_context:res.detail.value
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -135,6 +151,9 @@ Page({
         var asf = res.data[5].key.val.length
         var asg = res.data[6].key.val.length
         var ash = res.data[7].key.val.length
+        var asi = res.data[9].key.val.length
+        
+        var brede_context = res.data[8]
         if(asa !==0){that.setData({ljgmx: res.data[0]})}else{that.setData({tipsshow: "none"})};
         if(asb !==0){that.setData({ljgmx1: res.data[1]})}else{that.setData({tipsshow1: "none"})};
         if(asc !==0){that.setData({ljgmx2: res.data[2]})}else{that.setData({tipsshow2: "none"})};
@@ -143,12 +162,15 @@ Page({
         if(asf !==0){that.setData({ljgmx5: res.data[5]})}else{that.setData({tipsshow5: "none"})};
         if(asg !==0){that.setData({ljgmx6: res.data[6]})}else{that.setData({tipsshow6: "none"})};
         if(ash !==0){that.setData({ljgmx7: res.data[7]})}else{that.setData({tipsshow7: "none"})};
+        if (asi !== 0) { that.setData({ ljgmx9: res.data[9] }) } else { that.setData({ tipsshow9: "none" })};
+        if (brede_context !== undefined) { that.setData({ ljgmx8: res.data[8] }) } else { that.setData({ tipsshow8: "none" }) };
         // if(asc !==0) { that.setData({ ljgmx2: res.data[2] }) } else { that.setData({ tipsshow2: "none" }) };
         // if(asc !==0) { that.setData({ ljgmx2: res.data[2] }) } else { that.setData({ tipsshow2: "none" }) };
         // if(asc !==0) { that.setData({ ljgmx2: res.data[2] }) } else { that.setData({ tipsshow2: "none" }) };
         // that.setData({
         //   ljgmx6: res.data[6]
         // })
+      
         if(res.data.length>0){
           that.setData({
             id: res.data["0"].key.val["0"].id,
@@ -156,33 +178,40 @@ Page({
             abc: res.data["2"].key.val["0"].id,
             abd: res.data["3"].key.val["0"].id,
             abe: res.data["4"].key.val["0"].id,
-            abf: res.data["5"].key.val["0"].id,
+            abf: res.data["5"].key.val["4"].id,
             abg: res.data["6"].key.val["0"].id,
             abh: res.data["7"].key.val["0"].id,
+            asi: res.data["9"].key.val["0"].id,
+            brede_context: "",
+          })
+        }
+        if (res.data[9].key.val.length>0) {
+          that.setData({
+           asi: res.data["9"].key.val["0"].id
           })
         }
       });
     // 查询是否有量体信息
     var member_id = wx.getStorageSync('memberId');
     console.log(member_id)
-    app.apiRequest('/custom/newCustom', 'GET', {
-      'state': 1,
-      'memberId': member_id
-    },
-      function (res) {
-        console.log(res.data)
-        if (res.code == 200) {
-          that.setData({
-            ace: res.data.cus[0].name
-          })
-        } else if (res.code !== 200){
-          that.setData({
-            ace: "+ 添加尺寸"
-          })
-        }
-      });
+    // app.apiRequest('/custom/newCustom', 'GET', {
+    //   'state': 1,
+    //   'memberId': member_id
+    // },
+    //   function (res) {
+    //     console.log(res.data)
+    //     if (res.code == 200) {
+    //       that.setData({
+    //         ace: res.data.cus[0].name
+    //       })
+    //     } else if (res.code !== 200){
+    //       that.setData({
+    //         ace: "+ 添加尺寸"
+    //       })
+    //     }
+    //   });
   },
-  // 立即购买
+  // 开始定制
   clickasd: function (e) {
     var that = this
     var product_id = that.data.product_id
@@ -198,6 +227,8 @@ Page({
     var abf = that.data.abf
     var abg = that.data.abg
     var abh = that.data.abh
+    var asi = that.data.asi
+    var brede_context = that.data.brede_context
     let skuu = []
     if (id !== undefined) { skuu.push(id); }
     if (abb !== undefined) { skuu.push(abb); }
@@ -207,45 +238,80 @@ Page({
     if (abf !== undefined) { skuu.push(abf); }
     if (abg !== undefined) { skuu.push(abg); }
     if (abh !== undefined) { skuu.push(abh); }
+    if (asi !== undefined) { skuu.push(asi); }
+    console.log("打印=" + brede_context)
+    //if (brede_context !== undefined) { skuu.push(brede_context); }
     console.log(skuu)
-    app.apiRequest('/custom/getMemberCustom', 'GET', {
-      'memberId': member_id,
-      // 'memberId': 1,
-    }, function (res) {
-      if (res.data == ""){
+    // app.apiRequest('/custom/getMemberCustom', 'GET', {
+    //   'memberId': member_id,
+    //   // 'memberId': 1,
+    // }, function (res) {
+    //   if (res.data == ""){
+    //     wx.showToast({
+    //       title: '请选择身体尺寸',
+    //       icon: 'none',
+    //       duration: 1000
+    //     });
+    //   }else{
+             
+    //   }
+    // });
+
+
+    app.apiRequest('/shopCart/addMemberShopCart', 'POST', {
+      shopCart: skuu + "",
+      memberId: member_id,
+      productId: product_id,
+      productAmount: num,
+      brede_context: that.data.brede_context + " "
+    }, function (resa) {
+      console.log('brede_context')
+      console.log(brede_context)
+      console.log(resa.code)
+      console.log(resa.data.id)
+      if (resa.code == 200) {
+        console.log("加入购物车成功")
+        // wx.showToast({
+        //   title: '加入购物车成功',
+        //   icon: 'none',
+        //   duration: 2000
+        // })
+        wx.showModal({
+          content: '加入购物车成功！',
+          confirmText:'去结算',
+          cancelText:'继续购物',
+          cancelColor: '#4e7fa8',
+          confirmColor: '#4e7fa8',
+          success(res) {
+            if (res.confirm) {
+              wx.reLaunch({
+                url: '../../cart/cart',
+              })
+            } else if (res.cancel) {
+              wx.reLaunch({
+                url: '../../home/home',
+              })
+            }
+          }
+        })
+        // wx.navigateTo({
+        //   url: '../../cart/cart',
+        //   // delta: 1
+        // })
+        // timer: setTimeout(function () {
+        //   wx.reLaunch({
+        //     url: '../../cart/cart',
+        //   })
+        // }, 1500);
+      } else {
+        console.log("加入购物车失败")
         wx.showToast({
-          title: '请选择身体尺寸',
-          icon: 'none',
+          title: '加入购物车失败',
+          icon: 'success',
           duration: 1000
         });
-      }else{
-        app.apiRequest('/shopCart/addMemberShopCart','POST',{
-          shopCart: skuu + "",
-          memberId: member_id,
-          productId: product_id,
-          productAmount: num
-        },function(resa){
-          if(resa.code ==200){
-            console.log("加入购物车成功")
-            wx.showToast({
-              title: '加入购物车成功',
-              icon: 'none',
-              duration: 1000
-            });
-            wx.navigateBack({
-              delta: 1
-            })
-          }else{
-            console.log("加入购物车失败")
-            wx.showToast({
-              title: '加入购物车失败',
-              icon: 'none',
-              duration: 1000
-            });
-          }
-        })       
       }
-    });
+    }) 
   },
 
   /**
@@ -259,25 +325,25 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that =this
-    var member_id = wx.getStorageSync('memberId');
-    console.log(member_id)
-    app.apiRequest('/custom/newCustom', 'GET', {
-      'state': 1,
-      'memberId': member_id
-    },
-      function (res) {
-        console.log(res.data)
-        if (res.code == 200) {
-          that.setData({
-            ace: res.data.cus[0].name
-          })
-        } else if (res.code !== 200) {
-          that.setData({
-            ace: "+ 添加尺寸"
-          })
-        }
-      });
+    // var that =this
+    // var member_id = wx.getStorageSync('memberId');
+    // console.log(member_id)
+    // app.apiRequest('/custom/newCustom', 'GET', {
+    //   'state':1,
+    //   'memberId': member_id
+    // },
+    //   function (res) {
+    //     console.log(res.data)
+    //     if (res.code == 200) {
+    //       that.setData({
+    //         ace: res.data.cus[0].name
+    //       })
+    //     } else if (res.code !== 200) {
+    //       that.setData({
+    //         ace: "+ 添加尺寸"
+    //       })
+    //     }
+    //   });
   },
 
   openpage:function(e){
@@ -329,5 +395,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
 })

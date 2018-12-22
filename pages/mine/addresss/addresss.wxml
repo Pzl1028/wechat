@@ -1,22 +1,27 @@
 <view class='body'>
-  <view class='moren' style='display:{{asdasd}};'>
-    <image src='/img/isok.png' class='asda' ></image>
-    <text class='asda' >默认地址</text>
-  </view>
+  
+  <radio-group >
   <block  wx:for="{{address}}" wx:key="item.address_id">
-    <view class='header'>
-       <view class='headera'><text>{{item.consignee}}</text> <text>{{item.phone}}</text> </view>
-        <text class='headerc'>{{item.area}}{{item.detail}}</text>
-         <view class='headerb'>
-          <image src='/img/isok.png' class='asd' style='display:{{none}}none'></image>
-          <text class='asd' style='display:{{none}}none'>默认地址</text>
-          <image id='{{item.address_id}}' bindtap='sumit' src='/img/scdz.png'></image>
-          <navigator url='/pages/mine/modifyaddres/modifyaddres?address_id={{item.address_id}}&consignee={{item.consignee}}&area={{item.area}}&phone={{item.phone}}&detail={{item.detail}}'>
-          <image id='{{item.address_id}}'src='/img/bjdz.png'></image></navigator>
-        </view>
-    </view>    
+    <view  style='width:90%;height:auto;margin-left:5%;border-bottom: 2px solid #dadada;margin-top:20rpx;'>
+      <view style='width:100%;height:70rpx;' catchtap='selectAdders' data-adders="{{item}}">
+        <text style='float:left;font-size:28rpx;line-height:70rpx;'>{{item.consignee}}</text>
+        <text style='float:right;font-size:28rpx;line-height:70rpx;'>{{item.phone}}</text>
+      </view>
+      <view style='width:100%;height:50rpx;'>
+        <text style='float:left;font-size:26rpx;line-height:50rpx;color:#dadada;'>{{item.area}}{{item.detail}}</text>
+      </view>
+      <view style='width:100%;height:70rpx;'>
+        <radio id='adress' checked='{{item.address_id== isdefault}}' bindtap="changeadress" data-adress='{{item}}' style='font-size:27rpx;'>默认地址</radio>
+       
+        <image id='{{item.address_id}}'src='/img/bjdz.png' bindtap='updateadress' data-adress='{{item}}'  style='float:right;width:30rpx;height:30rpx;margin-top:20rpx;' ></image>
+       
+        <image id='{{item.address_id}}'  bindtap='sumit'  src='/img/scdz.png' style='float:right;width:30rpx;height:30rpx;margin-top:20rpx;margin-right:20rpx;'></image>
+       
+      </view>
+    </view>
   </block>
-  <text class='asd' style='display:{{none}}none'>默认地址</text>
+  </radio-group>
+  <!-- <text class='asd' style='display:{{none}}none'>默认地址</text> -->
   <view style='width:100%;height:60rpx;'></view>
   <navigator url='/pages/mine/address/address'>
   <view class='footer'>添加地址</view></navigator>

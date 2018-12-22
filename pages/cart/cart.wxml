@@ -8,19 +8,47 @@
 
                 <checkbox  wx:else type="circle" class="cart-pro-select" data-index="{{index}}" date-product="{{item}}" bindtap=""/> -->
                 <navigator url="../brand/details/details?product_id={{item.product_id}}&product_name={{item.product_name}}&product_price={{item.product_price}}"><image class="cart-thumb" src="{{item.icon_url}}"></image></navigator>
+                <view class='cart_span'>
+                  <view class='cart_span_view1'>
+                    <text style='line-height:46rpx;margin-left:5%;'>{{item.product_name}}</text>
+                  </view>
+                  <view class='cart_span_view2'>
+                    <view wx:if="{{item.brede_context!='无留言'}}" wx:for="{{item.sku}}"  wx:for-item="items" wx:key="items" >
+                      <text class='cart_sku' >{{items.sku_name}}</text>
+                    </view>
+                  </view>
+
+                  <view class='cart_span_view3'>
+                    <text style='line-height:54rpx;margin-left:5%;font-size:32rpx;color:#bc5e2f;'>￥{{item.product_price}}</text>
+                    <view class='cart_span_view4'>
+                        <text class='view4' bindtap="addCount" data-product="{{item}}" data-index="{{index}}">+</text>
+                        <text class='view4' style='background-color:#fff;' bindtap='delectprductlist'>{{item.product_amount}}</text>
+                        <text class='view4' data-product="{{item}}" bindtap="minusCount" data-obj="{{obj}}" data-index="{{index}}">-</text>
+                      
+                    </view>
+
+                   <image src='/img/delet.png' style='float:right;width:30rpx;height:30rpx;margin-top:12rpx;margin-right:20rpx;' id='{{item.shop_cart_id}}' ab='{{item.member_id}}' catchtap='sumbit'></image>
+                  </view>
+                </view>
+                
                 <!-- 商品价格规格名字 -->  
-                <text class="cart-pro-name">{{item.product_name}}</text>
+                <!-- <text class="cart-pro-name">{{item.product_name}}</text> -->
                 <!-- <navigator url='/pages/cart/cartgg/cartgg?id={{item.shop_cart_id}}'>
                 <text class="cart-pro-format" id='{{item.shop_cart_id}}' ab='{{item.shop_cart_id}}' bindtap='dainjgg'>点击查看商品规格</text></navigator> -->
-                <text class="cart-pro-price">￥{{item.product_price}}</text>
-                  <!-- 操作盒 -->
-                <view class="cart-count-box">
-                    <text class="cart-count-add" bindtap="addCount" data-product="{{item}}" data-index="{{index}}">+</text>
-                    <text class="cart-count-num">{{item.product_amount}}</text>
-                    <text class="cart-count-down" style='margin-top:3px;' data-product="{{item}}" bindtap="minusCount" data-obj="{{obj}}" data-index="{{index}}">-</text>
-                    <!--删除 -->
-                    <text class="cart-count-delete"  style='color:#392315;'  id='{{item.shop_cart_id}}' ab='{{item.member_id}}' catchtap='sumbit'>×</text> 
+                <!-- <text class='cart_sku' style=''></text>
+                <view wx:for="{{item.sku}}"  wx:for-item="items" wx:key="items" >
+                  <text class='cart_sku' >{{items.sku_name}}</text>
                 </view>
+                <text class="cart-pro-price">￥{{item.product_price}}</text>
+                <image src='/img/delet.png' style='float:right;width:40rpx;height:40rpx;margin-top:16%;'></image> -->
+                  <!-- 操作盒 -->
+                <!-- <view class="cart-count-box"> -->
+                <!-- <text class="cart-count-down" style='margin-top:3px;' data-product="{{item}}" bindtap="minusCount" data-obj="{{obj}}" data-index="{{index}}">-</text>
+                    <text class="cart-count-num">{{item.product_amount}}</text>
+                    <text class="cart-count-add" bindtap="addCount" data-product="{{item}}" data-index="{{index}}">+</text> -->
+                    <!--删除 -->
+                    <!-- <text class="cart-count-delete"  style='color:#392315;'  id='{{item.shop_cart_id}}' ab='{{item.member_id}}' catchtap='sumbit'>×</text>  -->
+                <!-- </view> -->
             </view>
             </checkbox-group>
         </view>
@@ -28,7 +56,7 @@
         <view class="cart-footer">
             <icon wx:if="{{selectAllStatus}}" type="success" color="#392315" class="total-select"  bindtap="selectAll"/>
             <icon wx:else type="circle" color="#000" class="total-select"  bindtap="selectAll"/>
-            <view class="order-icon"  catchtap='buyCart'>
+            <view  class="order-icon"  catchtap='buyCart'>
                 <!-- <navigator url="../korder/korder"> -->
                 <text>结算</text>
                 <!-- </navigator> -->

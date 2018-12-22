@@ -208,7 +208,7 @@ view .new_s{
 
 
   /* 不同手机兼容 */
-@media only screen and (max-width: 320px){ 
+/* @media only screen and (max-width: 320px){ 
   .maddle view{
     width: 175rpx;
     height: 175rpx;
@@ -226,12 +226,12 @@ view .new_s{
 /* @media only screen and (min-width: 750px) and (max-width: 768px){
    
 } */
-@media only screen and (min-width: 321px) and (max-width: 375px){
+/* @media only screen and (min-width: 321px) and (max-width: 375px){
    .headerbuttom view{
     width: 30%;
     margin-left: 3%;
   }  
-}
+}  */
 
 
 
@@ -274,10 +274,10 @@ view .new_s{
 
 .guobin_text2{
   float: right;
-  font-size: 27rpx;
+  font-size: 30rpx;
   line-height: 80rpx;
-  color: #E6E6E6;
-  margin-right: 5rpx;
+  color: #202020;
+  margin-right: 2.5%;
 }
 
 .guobin_img1{
@@ -286,6 +286,7 @@ view .new_s{
   height: 18rpx;
   margin-top: 31rpx;
   margin-right: 2.5%;
+  color: #202020;
 }
 
 .guobin_img2{
@@ -296,17 +297,17 @@ view .new_s{
 }
 
 .scroll_view{
-  width:100%;
+  width:97.5%;
   height: 400rpx;
   margin-top: 20rpx;
- 
+  margin-left: 2.5%;
 }
 
 .scroll_view1{
-   width: 30%;
+   width: 32%;
    height: 100%; 
    display: inline-block;
-   margin-left: 2.5%;
+   /* margin-left: 2.5%; */
 }
 
 .scroll_img1{
@@ -328,6 +329,8 @@ view .new_s{
  float: left;
  font-size: 27rpx;
  margin-left: 10rpx;
+ font-weight: 300;  
+/* 是字体变细 */
 }
 
 .scroll_view3{
@@ -341,7 +344,7 @@ view .new_s{
  float: left;
  font-size: 30rpx;
  margin-left: 10rpx;
- font-weight: 600;
+ font-weight: 550;
 }
 
 

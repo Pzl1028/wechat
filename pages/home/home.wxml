@@ -1,5 +1,5 @@
 <view class='body'>
-<!-- <button open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumber'>aa</button> -->
+  <!-- <button open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumber'>aa</button> -->
   <view id='headetop'>
     <swiper class="swiper-box" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{banner}}" wx:key="{{item}}">
@@ -72,25 +72,35 @@
   </view> -->
   <view style='width:95%;height:90rpx;margin-left:2.5%;border-top:2px solid #e5e5e5;border-bottom: 2px solid #e5e5e5;margin-top: 30rpx;'>
     <view style='width:33%;height:100%;display: inline-block;text-align:center;'>
-        <image src='/img/dingdan.png' style='float:left;width:35rpx;height:35rpx;margin-top:27.5rpx;margin-left:12%;'></image>
-        <navigator url='/pages/mine/myorder/myorder'><text style='float:left;font-size:30rpx;line-height:90rpx;margin-left:10rpx;'>我的订单</text></navigator>
+      <image src='/img/dingdan.png' style='float:left;width:35rpx;height:35rpx;margin-top:27.5rpx;margin-left:12%;'></image>
+      <navigator url='/pages/mine/myorder/myorder'>
+        <text style='float:left;font-size:30rpx;line-height:90rpx;margin-left:10rpx;'>我的订单</text>
+      </navigator>
     </view>
     <view style='width:34%;height:100%;display: inline-block;'>
-        <image src='/img/yue.png' style='float:left;width:35rpx;height:35rpx;margin-top:27.5rpx;margin-left:12%;'></image>
-         <navigator url='/pages/mine/balance/balance'><text style='float:left;font-size:30rpx;line-height:90rpx;margin-left:10rpx;'>我的余额</text></navigator>
+      <image src='/img/yue.png' style='float:left;width:35rpx;height:35rpx;margin-top:27.5rpx;margin-left:12%;'></image>
+      <navigator url='/pages/mine/balance/balance'>
+        <text style='float:left;font-size:30rpx;line-height:90rpx;margin-left:10rpx;'>我的余额</text>
+      </navigator>
     </view>
     <view style='width:33%;height:100%;display: inline-block;'>
-         <image src='/img/tixing.png' style='float:left;width:35rpx;height:35rpx;margin-top:27.5rpx;margin-left:12%;'></image>
-         <navigator url='/pages/mine/size/mysize/mysize'><text style='float:left;font-size:30rpx;line-height:90rpx;margin-left:10rpx;'>体型管理</text></navigator>
+      <image src='/img/tixing.png' style='float:left;width:35rpx;height:35rpx;margin-top:27.5rpx;margin-left:12%;'></image>
+      <navigator url='/pages/mine/size/mysize/mysize'>
+        <text style='float:left;font-size:30rpx;line-height:90rpx;margin-left:10rpx;'>体型管理</text>
+      </navigator>
     </view>
   </view>
   <!--  李武林编码  -->
   <block wx:key="{{index}}" wx:for="{{categoryList}}">
     <view class="guobin_view" hover-class="none" hover-stop-propagation="false">
       <text class="guobin_text1">{{item.title}}</text>
-      <image src='/img/right2.png' class='guobin_img1'></image>
-      <text class='guobin_text2'>更多</text>
-      <image class='guobin_img2' src='http://dns.pengyoujuhui.com/pyjh/son/934b77f1-0d09-4fd2-8fb7-baaa3c4d8446'></image>
+      <!-- <image src='/img/right2.png' class='guobin_img1'></image> -->
+      <!-- <text class='guobin_text2' bindtap='more'>更多</text> -->
+      <navigator url='/pages/home/moregoods/moregoods?id={{item.id}}&title={{item.title}}'>
+        <text class='guobin_text2'>更多></text>
+      </navigator>
+      <!-- <image class='guobin_img2' src='http://dns.pengyoujuhui.com/pyjh/son/934b77f1-0d09-4fd2-8fb7-baaa3c4d8446'></image> -->
+      <image class='guobin_img2' src="{{item.banner_url}}"></image>
     </view>
 
     <scroll-view scroll-x class='scroll_view' style='white-space: nowrap; display: flex'>
@@ -108,15 +118,16 @@
             <text class='scroll_text3'>￥{{item.product_price}}</text>
           </view>
         </view>
+        <view style='width:2.5%;height:100%;display:inline-block;'></view>
       </block>
     </scroll-view>
-
     <view class='view_both'></view>
   </block>
+
   <view class='guobin_view'>
     <text class="guobin_text1">{{competitive.title}}</text>
     <!-- 修改图片的地方  钓鱼台国宾系列-->
-    <image class='jingpin_img1' src='/img/audo.png'></image>
+    <image class='jingpin_img1' src='http://dns.pengyoujuhui.com/pyjh/son/529252d1-b522-4a23-b609-08c91269c0d9'></image>
     <block wx:key="{{index}}" wx:for="{{competitive.productList}}">
       <view class='jingpin2_view1' bindtap='productDetail' data-product_id='{{item.product_id}}' data-product_name='{{item.product_name}}' data-product_price='{{item.product_price}}' data-icon_url='{{item.icon_url}}'>
         <image class='jingpin_img4' src='{{item.icon_url}}'></image>
@@ -127,8 +138,6 @@
           <text class='jingpin_text2'>￥{{item.product_price}}</text>
         </view>
       </view>
-
-
     </block>
   </view>
   <view class='div' style='display:{{asdasd}}'>

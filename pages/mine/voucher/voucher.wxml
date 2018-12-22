@@ -1,7 +1,7 @@
 <view class='body'>
     <!-- 可使用的优惠劵 -->
     <block  wx:for="{{voucher}}" wx:key="item.ec_id">
-    <view class='header' data-id="{{item.ec_id}}" data-amount="{{item.discount_amount}}"   catchtap='click'>
+    <view class='header' data-id="{{item.ec_id}}" data-amount="{{item.discount_amount}}"  data-coupon="{{item}}"  catchtap='click'>
         <view class='headera'>
           <text>{{item.ec_code}}</text>
           <view class='headeras'>

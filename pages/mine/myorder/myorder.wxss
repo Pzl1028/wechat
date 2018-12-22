@@ -1,6 +1,6 @@
 @import '../../style/style.wxss';
 .body{
-  padding-top: 5%;
+  /* padding-top: 5%; */
 }
 .header {
   width: 100%;

@@ -268,6 +268,7 @@ Page({
                   success: function (res) {
                     console.log(res);
                     wx.setStorageSync("unionid", res.data.data.unionId);
+                    wx.setStorageSync('openid', res.data.data.openId);
                     that.setData({
                       auoth_user: false
                     })
@@ -465,6 +466,8 @@ getPhoneNumber:function(e){
                           'content-type': 'application/x-www-form-urlencoded'
                         },
                         success: function (res) {
+                          console.log("在这里");
+                          console.log(res)
                           console.log(res.data.session_key);
                           that.setData({
                             session_key: res.data.session_key

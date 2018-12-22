@@ -3,7 +3,7 @@
   <view id='header'> 
     <image src="http://cdn.pengyoujuhui.com/dfydz/dfydz.jpg"></image>
   </view>
-  <view class='maddle'>  
+  <!-- <view class='maddle'>  
       <form class='formsubmit' style='display:none;'>
         <input type='number' bindinput="accounts" maxlength='11' value="{{login.phone}}"  name="accounts" class='put' placeholder='请输入手机号'></input>
         <input type='password' bindinput="password" name="password" class='put' placeholder='请输入密码'></input>
@@ -16,28 +16,33 @@
             <text>注册</text>
           </navigator>
         </view>
-        <!-- catchtap='denglu' -->
         <view class='actionb' >     
           <button type='primary' formType="submit">登录</button>
         </view>
       </form>
-  </view>
-  <view  wx:if="{{phone}}" class='wxdl'>
+  </view> -->
+  <!-- <view  wx:if="{{phone}}" class='wxdl'>
     <button   id='wxdl' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 
       <image src='/img/getphone.jpg'  ></image> 
     </button>
-    <!-- <text>微信授权登录</text> -->
    </view>
 
    <view  wx:if="{{auoth_user}}" class='wxdl'>
     <button   id='wxdl' open-type="getUserInfo" bindgetuserinfo='getuser'> 
       <image src='/img/auoth.png'  ></image> 
     </button>
-    <!-- <text>微信授权登录</text> -->
-   </view>
-   <!-- <button wx:if="{{auoth_user}}" class='getuser' open-type="getUserInfo" bindgetuserinfo='getuser'>
-        <image style='width:420rpx;height:70rpx;' src='/img/auoth.png'></image>
-   </button> -->
+   </view> -->
+  <view wx:if="{{auoth_user}}" class='weixinauoth'>
+    <button  open-type="getUserInfo" bindgetuserinfo='getuser'>
+      <image src='/img/weixin.png'></image>
+    </button>
+  </view>
+
+  <view  wx:if="{{!auoth_user}}" class='phone'>
+    <button  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+      <image src='/img/phone.png'></image>
+    </button>
+  </view>
   <view class='footer'><text>上海市服装研究所有限公司</text></view>
 </view>
 

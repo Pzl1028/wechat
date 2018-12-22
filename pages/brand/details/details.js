@@ -23,7 +23,9 @@ Page({
     showModal:false,
     detailList:{},
     product_id:"",
-    num:1
+    num:1,
+    addcart:false,
+    product_num:1
   },
   clickasd: function (o) {
     wx.switchTab({
@@ -167,7 +169,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    
   },
 
   /**
@@ -196,5 +198,122 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  
+  addcart:function(){
+
+    var that=this;
+    var skuu = new Array();
+    app.apiRequest('/product/getProductSku', 'GET', {
+      'productId': that.data.product_id,
+    },
+   
+      function (res) {
+        
+        console.log(res)
+        if (res.data.length>0){
+          for(var i=0;i<res.data.length;i++){
+            skuu.push((res.data[i].key.val["0"].id)+"")    
+          }
+          var brede_context = new Array("无留言");
+          var member_id = wx.getStorageSync('memberId');
+          app.apiRequest('/shopCart/addMemberShopCart', 'POST', {
+            shopCart: skuu,
+            memberId: member_id,
+            productId: that.data.product_id,
+            productAmount: that.data.product_num,
+            brede_context: "无留言"
+          }, function (resa) {
+            console.log('brede_context')
+            console.log(brede_context)
+            console.log(resa.code)
+            console.log(resa.data.id)
+            if (resa.code == 200) {
+              console.log("加入购物车成功")
+              wx.showModal({
+                title: '',
+                content: '加入购物车成功！',
+                confirmText: '去结算',
+                cancelText: '继续购物',
+                cancelColor:'#4e7fa8',
+                confirmColor:'#4e7fa8',
+                success(res) {
+                  if (res.confirm) {
+                     wx.reLaunch({
+                      url: '../../cart/cart',
+                    })
+                  } else if (res.cancel) {
+                    that.setData({
+                      addcart: false
+                    })
+                  }
+                }
+              })
+
+              // wx.navigateTo({
+              //   url: '../../cart/cart',
+              //   // delta: 1
+              // })
+              // timer: setTimeout(function () {
+              //   wx.reLaunch({
+              //     url: '../../cart/cart',
+              //   })
+              // }, 1500);
+
+
+
+            } else {
+              console.log("加入购物车失败")
+              wx.showToast({
+                title: '加入购物车失败',
+                icon: 'success',
+                duration: 1000
+              });
+            }
+          }) 
+        }else{
+          wx.showToast({
+            title: '当前商品没有sku',
+            icon: 'SUCCESS',
+            duration: 0,
+            mask: true,
+            success: function(res) {},
+            fail: function(res) {},
+            complete: function(res) {},
+          })
+        }
+      }
+    )
+    //
+
+    
+  },
+
+
+  openaddcart: function () {
+    this.setData({
+      addcart: true
+    })
+  },
+
+  colseaddcart:function(){
+    this.setData({
+      addcart: false
+    })
+  },
+
+  addnum:function(){
+    this.setData({
+      product_num: this.data.product_num + 1
+    })
+  },
+  Lessnum:function(){
+    var num =this.data.product_num;
+    if(num>1){
+      this.setData({
+        product_num: this.data.product_num - 1
+      })
+    }
   }
+
 })

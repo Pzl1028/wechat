@@ -14,7 +14,10 @@ Page({
     interval: 3000,
     duration: 1000,
     asdasd: "none",
+    categoryList:[]
   },
+
+
   clicka: function () {
     var that = this
     that.setData({
@@ -94,16 +97,43 @@ Page({
         })
       });
 
-    //首页活动分类及分类商品
+   // 首页活动分类及分类商品
     app.apiRequest('/category/getHomeCategory', 'POST', {
 
     },
       function (res) {
-        console.log(res.data)
+        console.log("res.data")
+        console.log(res.data[0])
+        console.log(res.data[1])
+        console.log(res.data[2])
         that.setData({
           categoryList: res.data
         })
       })
+
+    // wx.request({
+    //   method:"POST",
+    //   url: 'https://www.pengyoujuhui.com/clothing/category/getHomeCategory',
+    //   data:{
+
+    //   },
+    //   header: {
+    //     'content-type': 'application/x-www-form-urlencoded' // 默认值
+    //   },
+    //   success:function(res){
+    //     console.log(res);
+    //   },
+    //   fail:function(res){
+
+    //   },
+    //   complete:function(res){
+
+    //   }
+    // })
+
+
+
+
     // 首页banner
     app.apiRequest('/banner/getHomeBanner', 'GET', {
       'state': 1
@@ -127,6 +157,12 @@ Page({
       //  }
     });
   },
+  //更多商品
+  // more:function(){
+  //   wx.navigateTo({
+  //     url: '../home/moregoods/moregoods',
+  //   })
+  // },
   //领取红包
   lingquhongbao: function () {
     var that = this

@@ -1,7 +1,5 @@
 {
   "pages": [
-    
-   
     "pages/login/login",
     "pages/home/home",
     "pages/brand/jrgwcx/jrgwcx",  
@@ -12,6 +10,8 @@
     "pages/loginone/loginone",
     "pages/forget/forget",
     "pages/home/toorder/toorder",
+    "pages/home/updatetoorder/updatetoorder",
+    "pages/home/moregoods/moregoods",
     "pages/brand/ljgmx/ljgmx",
     "pages/korder/korder",
     "pages/brand/details/details",
@@ -29,7 +29,6 @@
     "pages/mine/voucher/voucher",
     "pages/brand/sizepage/sizepage",
     "pages/home/toorderscz/toorderscz",
-    
     "pages/mine/myorder/myorder",
     "pages/mine/myorder/myorderwl/myorderwl",
     "pages/mine/myorder/myorderfu/myorderfu",

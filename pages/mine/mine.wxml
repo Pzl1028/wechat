@@ -26,12 +26,12 @@
   <view class='fahuxl'>
     <navigator url='/pages/mine/myorder/myorderfu/myorderfu'>
     <view class='fahuxl1'>
-      <image src='http://cdn.pengyoujuhui.com/payment.png'></image>
+      <image src='/img/payment.png'></image>
       <text>待付款</text>
     </view></navigator>
     <navigator url='/pages/mine/myorder/myorderfa/myorderfa'>
     <view class='fahuxl1'>
-      <image src='http://cdn.pengyoujuhui.com/deliver.png'></image>
+      <image src='/img/deliver.png'></image>
       <text>待发货</text>
     </view></navigator>
     <navigator url='/pages/mine/myorder/myordershou/myordershou'>
